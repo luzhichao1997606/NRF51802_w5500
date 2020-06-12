@@ -1,0 +1,220 @@
+Dependencies for Project 'NET', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6140000::V6.14::ARMCLANG
+F (.\HARDWARE\Hal\hal.c)(0x5EE321C6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/hal.o -MD)
+I (HARDWARE\Hal\hal.h)(0x5EE32198)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51.h)(0x5E5F5134)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\system_nrf51.h)(0x5E5F5126)
+I (LIB\drivers_nrf\hal\nrf_gpio.h)(0x5EE3153F)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf.h)(0x5E5F512C)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_bitfields.h)(0x5E5F5124)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_deprecated.h)(0x5E5F512E)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\compiler_abstraction.h)(0x5E5F512E)
+I (LIB\drivers_nrf\hal\nrf_peripherals.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51802_peripherals.h)(0x5E5F5130)
+I (LIB\libraries\util\nrf_assert.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error.h)(0x5EE32152)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5EE30B13)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DDFFD72)
+I (LIB\libraries\util\sdk_errors.h)(0x590C6BCD)
+I (LIB\drivers_nrf\nrf_soc_nosd\nrf_error.h)(0x590C6BCD)
+I (..\NRF51802_w5500\sdk_config.h)(0x5EE31A44)
+I (LIB\libraries\util\nordic_common.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error_weak.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DDFFD6A)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DDFFD6C)
+I (LIB\libraries\util\app_util_platform.h)(0x590C6BCD)
+I (LIB\drivers_nrf\spi_master\nrf_drv_spi.h)(0x590C6BCD)
+I (LIB\drivers_nrf\hal\nrf_spi.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+I (LIB\drivers_nrf\delay\nrf_delay.h)(0x5EE315F6)
+F (.\HARDWARE\w5500\Ethernet\W5500\w5500.c)(0x5E1425FE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/w5500.o -MD)
+I (HARDWARE\w5500\Ethernet\W5500\w5500.h)(0x5E1305E8)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (HARDWARE\w5500\Ethernet\wizchip_conf.h)(0x5E0F1509)
+F (.\HARDWARE\w5500\Ethernet\socket.c)(0x5EE323F1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/socket.o -MD)
+I (HARDWARE\w5500\Ethernet\socket.h)(0x5E1305FC)
+I (HARDWARE\w5500\Ethernet\wizchip_conf.h)(0x5E0F1509)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (HARDWARE\w5500\Ethernet\W5500\w5500.h)(0x5E1305E8)
+F (.\HARDWARE\w5500\Ethernet\wizchip_conf.c)(0x5E1425FE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/wizchip_conf.o -MD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+I (HARDWARE\w5500\Ethernet\wizchip_conf.h)(0x5E0F1509)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (HARDWARE\w5500\Ethernet\W5500\w5500.h)(0x5E1305E8)
+F (.\LIB\drivers_nrf\spi_master\nrf_drv_spi.c)(0x590C6BCD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/nrf_drv_spi.o -MD)
+I (LIB\libraries\util\sdk_common.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DDFFD6C)
+I (..\NRF51802_w5500\sdk_config.h)(0x5EE31A44)
+I (LIB\libraries\util\nordic_common.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\compiler_abstraction.h)(0x5E5F512E)
+I (LIB\libraries\util\sdk_os.h)(0x590C6BCD)
+I (LIB\libraries\util\sdk_errors.h)(0x590C6BCD)
+I (LIB\drivers_nrf\nrf_soc_nosd\nrf_error.h)(0x590C6BCD)
+I (LIB\libraries\util\app_util.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf.h)(0x5E5F512C)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51.h)(0x5E5F5134)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\system_nrf51.h)(0x5E5F5126)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_bitfields.h)(0x5E5F5124)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_deprecated.h)(0x5E5F512E)
+I (LIB\libraries\util\sdk_macros.h)(0x590C6BCD)
+I (LIB\drivers_nrf\spi_master\nrf_drv_spi.h)(0x590C6BCD)
+I (LIB\drivers_nrf\hal\nrf_peripherals.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51802_peripherals.h)(0x5E5F5130)
+I (LIB\drivers_nrf\hal\nrf_spi.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+I (LIB\drivers_nrf\common\nrf_drv_common.h)(0x590C6BCD)
+I (LIB\libraries\util\nrf_assert.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error.h)(0x5EE32152)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5EE30B13)
+I (LIB\libraries\util\app_error_weak.h)(0x590C6BCD)
+I (LIB\drivers_nrf\hal\nrf_gpio.h)(0x5EE3153F)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DDFFD6A)
+I (LIB\libraries\util\app_util_platform.h)(0x590C6BCD)
+I (LIB\libraries\log\nrf_log.h)(0x590C6BCD)
+I (LIB\libraries\log\src\nrf_log_internal.h)(0x590C6BCD)
+F (.\LIB\drivers_nrf\common\nrf_drv_common.c)(0x590C6BCD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/nrf_drv_common.o -MD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+I (LIB\drivers_nrf\common\nrf_drv_common.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DDFFD72)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf.h)(0x5E5F512C)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51.h)(0x5E5F5134)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\system_nrf51.h)(0x5E5F5126)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_bitfields.h)(0x5E5F5124)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_deprecated.h)(0x5E5F512E)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\compiler_abstraction.h)(0x5E5F512E)
+I (LIB\libraries\util\sdk_errors.h)(0x590C6BCD)
+I (LIB\drivers_nrf\nrf_soc_nosd\nrf_error.h)(0x590C6BCD)
+I (..\NRF51802_w5500\sdk_config.h)(0x5EE31A44)
+I (LIB\libraries\util\sdk_common.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DDFFD6C)
+I (LIB\libraries\util\nordic_common.h)(0x590C6BCD)
+I (LIB\libraries\util\sdk_os.h)(0x590C6BCD)
+I (LIB\libraries\util\app_util.h)(0x590C6BCD)
+I (LIB\libraries\util\sdk_macros.h)(0x590C6BCD)
+I (LIB\libraries\util\nrf_assert.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error.h)(0x5EE32152)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5EE30B13)
+I (LIB\libraries\util\app_error_weak.h)(0x590C6BCD)
+I (LIB\libraries\util\app_util_platform.h)(0x590C6BCD)
+I (LIB\drivers_nrf\hal\nrf_peripherals.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51802_peripherals.h)(0x5E5F5130)
+F (.\USER\main.c)(0x5EE329DA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/main.o -MD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51.h)(0x5E5F5134)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\system_nrf51.h)(0x5E5F5126)
+I (LIB\drivers_nrf\delay\nrf_delay.h)(0x5EE315F6)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf.h)(0x5E5F512C)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_bitfields.h)(0x5E5F5124)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_deprecated.h)(0x5E5F512E)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\compiler_abstraction.h)(0x5E5F512E)
+I (LIB\drivers_nrf\hal\nrf_gpio.h)(0x5EE3153F)
+I (LIB\drivers_nrf\hal\nrf_peripherals.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51802_peripherals.h)(0x5E5F5130)
+I (LIB\libraries\util\nrf_assert.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error.h)(0x5EE32152)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5EE30B13)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DDFFD72)
+I (LIB\libraries\util\sdk_errors.h)(0x590C6BCD)
+I (LIB\drivers_nrf\nrf_soc_nosd\nrf_error.h)(0x590C6BCD)
+I (..\NRF51802_w5500\sdk_config.h)(0x5EE31A44)
+I (LIB\libraries\util\nordic_common.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error_weak.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DDFFD6A)
+I (HARDWARE\w5500\Ethernet\W5500\w5500.h)(0x5E1305E8)
+I (HARDWARE\w5500\Ethernet\wizchip_conf.h)(0x5E0F1509)
+I (HARDWARE\w5500\Ethernet\socket.h)(0x5E1305FC)
+I (..\NRF51802_w5500\hal.h)(0x5EE30D7A)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DDFFD6C)
+I (LIB\libraries\util\app_util_platform.h)(0x590C6BCD)
+I (LIB\drivers_nrf\spi_master\nrf_drv_spi.h)(0x590C6BCD)
+I (LIB\drivers_nrf\hal\nrf_spi.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+F (.\USER\nrf_it.c)(0x5EE32772)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/nrf_it.o -MD)
+I (..\NRF51802_w5500\hal.h)(0x5EE30D7A)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51.h)(0x5E5F5134)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\system_nrf51.h)(0x5E5F5126)
+I (LIB\drivers_nrf\hal\nrf_gpio.h)(0x5EE3153F)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf.h)(0x5E5F512C)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_bitfields.h)(0x5E5F5124)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_deprecated.h)(0x5E5F512E)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\compiler_abstraction.h)(0x5E5F512E)
+I (LIB\drivers_nrf\hal\nrf_peripherals.h)(0x590C6BCD)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51802_peripherals.h)(0x5E5F5130)
+I (LIB\libraries\util\nrf_assert.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error.h)(0x5EE32152)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5EE30B13)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DDFFD72)
+I (LIB\libraries\util\sdk_errors.h)(0x590C6BCD)
+I (LIB\drivers_nrf\nrf_soc_nosd\nrf_error.h)(0x590C6BCD)
+I (..\NRF51802_w5500\sdk_config.h)(0x5EE31A44)
+I (LIB\libraries\util\nordic_common.h)(0x590C6BCD)
+I (LIB\libraries\util\app_error_weak.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DDFFD6A)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DDFFD6C)
+I (LIB\libraries\util\app_util_platform.h)(0x590C6BCD)
+I (LIB\drivers_nrf\spi_master\nrf_drv_spi.h)(0x590C6BCD)
+I (LIB\drivers_nrf\hal\nrf_spi.h)(0x590C6BCD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5DDFFD72)
+I (LIB\drivers_nrf\delay\nrf_delay.h)(0x5EE315F6)
+I (HARDWARE\w5500\Ethernet\wizchip_conf.h)(0x5E0F1509)
+I (HARDWARE\w5500\Ethernet\W5500\w5500.h)(0x5E1305E8)
+F (RTE\Device\nRF51802_xxAA\arm_startup_nrf51.s)(0x5E5F511E)(--target=arm-arm-none-eabi -mcpu=cortex-m0 -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 530" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"NRF51802_XXAA SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/arm_startup_nrf51.o)
+F (RTE\Device\nRF51802_xxAA\system_nrf51.c)(0x5EE209FE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./LIB/toolchain -I ./LIB/drivers_nrf/hal -I ./LIB/drivers_nrf/nrf_soc_nosd -I ./LIB/drivers_nrf/delay -I ./HARDWARE/w5500/Ethernet/W5500 -I ./HARDWARE/w5500/Ethernet -I ./LIB/drivers_nrf/spi_master -I ../NRF51802_w5500 -I ./LIB/drivers_nrf/config -I ./LIB/drivers_nrf/gpiote -I ./LIB/drivers_nrf/common -I ./LIB/libraries/log -I ./LIB/libraries/log/src -I ./LIB/libraries/util-I./RTE/_Target_1-ID:/Users/qilai/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Users/qilai/AppData/Local/Arm/Packs/NordicSemiconductor/nRF_DeviceFamilyPack/8.32.1/Device/Include-D__UVISION_VERSION="530" -D_RTE_ -DNRF51802_XXAA -D_RTE_ -DNRF51 -DNRF51802-o ./objects/system_nrf51.o -MD)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DDFFD72)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DDFFD72)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf.h)(0x5E5F512C)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51.h)(0x5E5F5134)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\system_nrf51.h)(0x5E5F5126)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_bitfields.h)(0x5E5F5124)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_deprecated.h)(0x5E5F512E)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\compiler_abstraction.h)(0x5E5F512E)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf_erratas.h)(0x5E5F5132)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf51_erratas.h)(0x5E5F5132)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf52_erratas.h)(0x5E5F5132)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf53_erratas.h)(0x5E5F5132)
+I (D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include\nrf91_erratas.h)(0x5E5F5132)
+I (LIB\toolchain\system_nrf51.h)(0x590C5DB9)

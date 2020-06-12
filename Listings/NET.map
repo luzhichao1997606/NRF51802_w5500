@@ -1,0 +1,883 @@
+Component: ARM Compiler 6.14 Tool: armlink [5db06800]
+
+==============================================================================
+
+Section Cross References
+
+    hal.o(.text.halInit) refers to nrf_drv_spi.o(.text.nrf_drv_spi_init) for nrf_drv_spi_init
+    hal.o(.text.halInit) refers to hal.o(.rodata.m_spi_master_0) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.halInit) refers to hal.o(.text.halInit) for [Anonymous Symbol]
+    hal.o(.text.delay_ms) refers to hal.o(.bss.delayTicks) for delayTicks
+    hal.o(.ARM.exidx.text.delay_ms) refers to hal.o(.text.delay_ms) for [Anonymous Symbol]
+    hal.o(.text.UART_Printf) refers to printfa.o(i.__0vsnprintf) for vsnprintf
+    hal.o(.text.UART_Printf) refers to strlen.o(.text) for strlen
+    hal.o(.text.UART_Printf) refers to hal.o(.text.IR_SendData) for IR_SendData
+    hal.o(.ARM.exidx.text.UART_Printf) refers to hal.o(.text.UART_Printf) for [Anonymous Symbol]
+    hal.o(.text.IR_SendData) refers to hal.o(.text.IR_SendByte) for IR_SendByte
+    hal.o(.ARM.exidx.text.IR_SendData) refers to hal.o(.text.IR_SendData) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.putchar) refers to hal.o(.text.putchar) for [Anonymous Symbol]
+    hal.o(.text.Uart_SendData) refers to hal.o(.text.putchar) for putchar
+    hal.o(.ARM.exidx.text.Uart_SendData) refers to hal.o(.text.Uart_SendData) for [Anonymous Symbol]
+    hal.o(.text.Uart_SendStr) refers to hal.o(.text.putchar) for putchar
+    hal.o(.ARM.exidx.text.Uart_SendStr) refers to hal.o(.text.Uart_SendStr) for [Anonymous Symbol]
+    hal.o(.text.GetSystemNowtime) refers to hal.o(.bss.SystemNowtime) for SystemNowtime
+    hal.o(.ARM.exidx.text.GetSystemNowtime) refers to hal.o(.text.GetSystemNowtime) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.nrf_timer_delay_ms) refers to hal.o(.text.nrf_timer_delay_ms) for [Anonymous Symbol]
+    hal.o(.text.delay_us) refers to hal.o(.bss.delay_us_Ticks) for delay_us_Ticks
+    hal.o(.ARM.exidx.text.delay_us) refers to hal.o(.text.delay_us) for [Anonymous Symbol]
+    hal.o(.text.IR_SendByte) refers to hal.o(.text.nrf_timer_delay_ms) for nrf_timer_delay_ms
+    hal.o(.ARM.exidx.text.IR_SendByte) refers to hal.o(.text.IR_SendByte) for [Anonymous Symbol]
+    hal.o(.text.SPI_ReadWriteByte) refers to nrf_drv_spi.o(.text.nrf_drv_spi_transfer) for nrf_drv_spi_transfer
+    hal.o(.text.SPI_ReadWriteByte) refers to hal.o(.rodata.m_spi_master_0) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.SPI_ReadWriteByte) refers to hal.o(.text.SPI_ReadWriteByte) for [Anonymous Symbol]
+    hal.o(.text.SPI_WriteByte) refers to nrf_drv_spi.o(.text.nrf_drv_spi_transfer) for nrf_drv_spi_transfer
+    hal.o(.text.SPI_WriteByte) refers to hal.o(.rodata.m_spi_master_0) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.SPI_WriteByte) refers to hal.o(.text.SPI_WriteByte) for [Anonymous Symbol]
+    hal.o(.text.SPI_ReadByte) refers to nrf_drv_spi.o(.text.nrf_drv_spi_transfer) for nrf_drv_spi_transfer
+    hal.o(.text.SPI_ReadByte) refers to hal.o(.rodata.m_spi_master_0) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.SPI_ReadByte) refers to hal.o(.text.SPI_ReadByte) for [Anonymous Symbol]
+    hal.o(.ARM.exidx.text.comCRC8) refers to hal.o(.text.comCRC8) for [Anonymous Symbol]
+    w5500.o(.text.WIZCHIP_READ) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    w5500.o(.ARM.exidx.text.WIZCHIP_READ) refers to w5500.o(.text.WIZCHIP_READ) for [Anonymous Symbol]
+    w5500.o(.text.WIZCHIP_WRITE) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    w5500.o(.ARM.exidx.text.WIZCHIP_WRITE) refers to w5500.o(.text.WIZCHIP_WRITE) for [Anonymous Symbol]
+    w5500.o(.text.WIZCHIP_READ_BUF) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    w5500.o(.ARM.exidx.text.WIZCHIP_READ_BUF) refers to w5500.o(.text.WIZCHIP_READ_BUF) for [Anonymous Symbol]
+    w5500.o(.text.WIZCHIP_WRITE_BUF) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    w5500.o(.ARM.exidx.text.WIZCHIP_WRITE_BUF) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for [Anonymous Symbol]
+    w5500.o(.text.getSn_TX_FSR) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(.ARM.exidx.text.getSn_TX_FSR) refers to w5500.o(.text.getSn_TX_FSR) for [Anonymous Symbol]
+    w5500.o(.text.getSn_RX_RSR) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(.ARM.exidx.text.getSn_RX_RSR) refers to w5500.o(.text.getSn_RX_RSR) for [Anonymous Symbol]
+    w5500.o(.text.wiz_send_data) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(.text.wiz_send_data) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    w5500.o(.text.wiz_send_data) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    w5500.o(.ARM.exidx.text.wiz_send_data) refers to w5500.o(.text.wiz_send_data) for [Anonymous Symbol]
+    w5500.o(.text.wiz_recv_data) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(.text.wiz_recv_data) refers to w5500.o(.text.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    w5500.o(.text.wiz_recv_data) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    w5500.o(.ARM.exidx.text.wiz_recv_data) refers to w5500.o(.text.wiz_recv_data) for [Anonymous Symbol]
+    w5500.o(.text.wiz_recv_ignore) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(.text.wiz_recv_ignore) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    w5500.o(.ARM.exidx.text.wiz_recv_ignore) refers to w5500.o(.text.wiz_recv_ignore) for [Anonymous Symbol]
+    socket.o(.text.socket) refers to w5500.o(.text.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    socket.o(.text.socket) refers to socket.o(.text.close) for close
+    socket.o(.text.socket) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.socket) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.socket) refers to socket.o(.data.sock_any_port) for [Anonymous Symbol]
+    socket.o(.text.socket) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.socket) refers to socket.o(.text.socket) for [Anonymous Symbol]
+    socket.o(.text.close) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.close) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.close) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.close) refers to socket.o(.text.close) for [Anonymous Symbol]
+    socket.o(.text.listen) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.listen) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.listen) refers to socket.o(.text.close) for close
+    socket.o(.ARM.exidx.text.listen) refers to socket.o(.text.listen) for [Anonymous Symbol]
+    socket.o(.text.connect) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.connect) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    socket.o(.text.connect) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.connect) refers to nrf_it.o(.bss.closed_time) for closed_time
+    socket.o(.text.connect) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.connect) refers to socket.o(.text.connect) for [Anonymous Symbol]
+    socket.o(.text.disconnect) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.disconnect) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.disconnect) refers to socket.o(.text.close) for close
+    socket.o(.text.disconnect) refers to nrf_it.o(.bss.closed_time) for closed_time
+    socket.o(.text.disconnect) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.disconnect) refers to socket.o(.text.disconnect) for [Anonymous Symbol]
+    socket.o(.text.send) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.send) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.send) refers to w5500.o(.text.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(.text.send) refers to w5500.o(.text.wiz_send_data) for wiz_send_data
+    socket.o(.text.send) refers to socket.o(.text.close) for close
+    socket.o(.text.send) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.send) refers to socket.o(.text.send) for [Anonymous Symbol]
+    socket.o(.text.recv) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.recv) refers to w5500.o(.text.getSn_RX_RSR) for getSn_RX_RSR
+    socket.o(.text.recv) refers to w5500.o(.text.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(.text.recv) refers to w5500.o(.text.wiz_recv_data) for wiz_recv_data
+    socket.o(.text.recv) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.recv) refers to socket.o(.text.close) for close
+    socket.o(.text.recv) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.recv) refers to socket.o(.text.recv) for [Anonymous Symbol]
+    socket.o(.text.sendto) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.sendto) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    socket.o(.text.sendto) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.sendto) refers to w5500.o(.text.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(.text.sendto) refers to w5500.o(.text.wiz_send_data) for wiz_send_data
+    socket.o(.text.sendto) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.sendto) refers to socket.o(.text.sendto) for [Anonymous Symbol]
+    socket.o(.text.recvfrom) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.recvfrom) refers to w5500.o(.text.wiz_recv_data) for wiz_recv_data
+    socket.o(.text.recvfrom) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.recvfrom) refers to w5500.o(.text.getSn_RX_RSR) for getSn_RX_RSR
+    socket.o(.text.recvfrom) refers to socket.o(.text.close) for close
+    socket.o(.text.recvfrom) refers to w5500.o(.text.wiz_recv_ignore) for wiz_recv_ignore
+    socket.o(.text.recvfrom) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.recvfrom) refers to socket.o(.text.recvfrom) for [Anonymous Symbol]
+    socket.o(.text.ctlsocket) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.ctlsocket) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.ctlsocket) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.ctlsocket) refers to socket.o(.text.ctlsocket) for [Anonymous Symbol]
+    socket.o(.text.setsockopt) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(.text.setsockopt) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    socket.o(.text.setsockopt) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.ARM.exidx.text.setsockopt) refers to socket.o(.text.setsockopt) for [Anonymous Symbol]
+    socket.o(.text.getsockopt) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(.text.getsockopt) refers to w5500.o(.text.getSn_RX_RSR) for getSn_RX_RSR
+    socket.o(.text.getsockopt) refers to w5500.o(.text.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    socket.o(.text.getsockopt) refers to w5500.o(.text.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(.text.getsockopt) refers to socket.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    socket.o(.ARM.exidx.text.getsockopt) refers to socket.o(.text.getsockopt) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_cris_enter) refers to wizchip_conf.o(.text.wizchip_cris_enter) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_cris_exit) refers to wizchip_conf.o(.text.wizchip_cris_exit) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_cs_select) refers to wizchip_conf.o(.text.wizchip_cs_select) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_cs_deselect) refers to wizchip_conf.o(.text.wizchip_cs_deselect) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_bus_readdata) refers to wizchip_conf.o(.text.wizchip_bus_readdata) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_bus_writedata) refers to wizchip_conf.o(.text.wizchip_bus_writedata) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_spi_readbyte) refers to wizchip_conf.o(.text.wizchip_spi_readbyte) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_spi_writebyte) refers to wizchip_conf.o(.text.wizchip_spi_writebyte) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_spi_readburst) refers to wizchip_conf.o(.text.wizchip_spi_readburst) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_spi_writeburst) refers to wizchip_conf.o(.text.wizchip_spi_writeburst) for [Anonymous Symbol]
+    wizchip_conf.o(.text.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(.text.wizchip_cris_exit) for wizchip_cris_exit
+    wizchip_conf.o(.text.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    wizchip_conf.o(.text.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(.text.wizchip_cris_enter) for wizchip_cris_enter
+    wizchip_conf.o(.ARM.exidx.text.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(.text.reg_wizchip_cris_cbfunc) for [Anonymous Symbol]
+    wizchip_conf.o(.text.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(.text.wizchip_cs_deselect) for wizchip_cs_deselect
+    wizchip_conf.o(.text.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    wizchip_conf.o(.text.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(.text.wizchip_cs_select) for wizchip_cs_select
+    wizchip_conf.o(.ARM.exidx.text.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(.text.reg_wizchip_cs_cbfunc) for [Anonymous Symbol]
+    wizchip_conf.o(.text.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    wizchip_conf.o(.text.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(.text.wizchip_bus_writedata) for wizchip_bus_writedata
+    wizchip_conf.o(.text.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(.text.wizchip_bus_readdata) for wizchip_bus_readdata
+    wizchip_conf.o(.ARM.exidx.text.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(.text.reg_wizchip_bus_cbfunc) for [Anonymous Symbol]
+    wizchip_conf.o(.text.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    wizchip_conf.o(.text.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(.text.wizchip_spi_writebyte) for wizchip_spi_writebyte
+    wizchip_conf.o(.text.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(.text.wizchip_spi_readbyte) for wizchip_spi_readbyte
+    wizchip_conf.o(.ARM.exidx.text.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(.text.reg_wizchip_spi_cbfunc) for [Anonymous Symbol]
+    wizchip_conf.o(.text.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    wizchip_conf.o(.text.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(.text.wizchip_spi_writeburst) for wizchip_spi_writeburst
+    wizchip_conf.o(.text.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(.text.wizchip_spi_readburst) for wizchip_spi_readburst
+    wizchip_conf.o(.ARM.exidx.text.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(.text.reg_wizchip_spiburst_cbfunc) for [Anonymous Symbol]
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizchip_sw_reset) for wizchip_sw_reset
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizchip_init) for wizchip_init
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizchip_clrinterrupt) for wizchip_clrinterrupt
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizphy_setphyconf) for wizphy_setphyconf
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizphy_getphyconf) for wizphy_getphyconf
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizphy_getphypmode) for wizphy_getphypmode
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizchip_getinterrupt) for wizchip_getinterrupt
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizchip_setinterruptmask) for wizchip_setinterruptmask
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizchip_getinterruptmask) for wizchip_getinterruptmask
+    wizchip_conf.o(.text.ctlwizchip) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.text.ctlwizchip) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizphy_reset) for wizphy_reset
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizphy_setphypmode) for wizphy_setphypmode
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.text.wizphy_getphylink) for wizphy_getphylink
+    wizchip_conf.o(.text.ctlwizchip) refers to wizchip_conf.o(.data.WIZCHIP) for WIZCHIP
+    wizchip_conf.o(.ARM.exidx.text.ctlwizchip) refers to wizchip_conf.o(.text.ctlwizchip) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_sw_reset) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.text.wizchip_sw_reset) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.text.wizchip_sw_reset) refers to w5500.o(.text.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    wizchip_conf.o(.text.wizchip_sw_reset) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    wizchip_conf.o(.ARM.exidx.text.wizchip_sw_reset) refers to wizchip_conf.o(.text.wizchip_sw_reset) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_init) refers to wizchip_conf.o(.text.wizchip_sw_reset) for wizchip_sw_reset
+    wizchip_conf.o(.text.wizchip_init) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.ARM.exidx.text.wizchip_init) refers to wizchip_conf.o(.text.wizchip_init) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_clrinterrupt) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.ARM.exidx.text.wizchip_clrinterrupt) refers to wizchip_conf.o(.text.wizchip_clrinterrupt) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_getinterrupt) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizchip_getinterrupt) refers to wizchip_conf.o(.text.wizchip_getinterrupt) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_setinterruptmask) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.ARM.exidx.text.wizchip_setinterruptmask) refers to wizchip_conf.o(.text.wizchip_setinterruptmask) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_getinterruptmask) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizchip_getinterruptmask) refers to wizchip_conf.o(.text.wizchip_getinterruptmask) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_reset) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.text.wizphy_reset) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.ARM.exidx.text.wizphy_reset) refers to wizchip_conf.o(.text.wizphy_reset) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_setphyconf) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.text.wizphy_setphyconf) refers to wizchip_conf.o(.text.wizphy_reset) for wizphy_reset
+    wizchip_conf.o(.ARM.exidx.text.wizphy_setphyconf) refers to wizchip_conf.o(.text.wizphy_setphyconf) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_getphyconf) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizphy_getphyconf) refers to wizchip_conf.o(.text.wizphy_getphyconf) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_setphypmode) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.text.wizphy_setphypmode) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.text.wizphy_setphypmode) refers to wizchip_conf.o(.text.wizphy_reset) for wizphy_reset
+    wizchip_conf.o(.ARM.exidx.text.wizphy_setphypmode) refers to wizchip_conf.o(.text.wizphy_setphypmode) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_getphypmode) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizphy_getphypmode) refers to wizchip_conf.o(.text.wizphy_getphypmode) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_getphylink) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizphy_getphylink) refers to wizchip_conf.o(.text.wizphy_getphylink) for [Anonymous Symbol]
+    wizchip_conf.o(.text.ctlnetwork) refers to wizchip_conf.o(.text.wizchip_setnetinfo) for wizchip_setnetinfo
+    wizchip_conf.o(.text.ctlnetwork) refers to wizchip_conf.o(.text.wizchip_getnetinfo) for wizchip_getnetinfo
+    wizchip_conf.o(.text.ctlnetwork) refers to wizchip_conf.o(.text.wizchip_setnetmode) for wizchip_setnetmode
+    wizchip_conf.o(.text.ctlnetwork) refers to wizchip_conf.o(.text.wizchip_getnetmode) for wizchip_getnetmode
+    wizchip_conf.o(.text.ctlnetwork) refers to wizchip_conf.o(.text.wizchip_settimeout) for wizchip_settimeout
+    wizchip_conf.o(.text.ctlnetwork) refers to wizchip_conf.o(.text.wizchip_gettimeout) for wizchip_gettimeout
+    wizchip_conf.o(.ARM.exidx.text.ctlnetwork) refers to wizchip_conf.o(.text.ctlnetwork) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_setnetinfo) refers to w5500.o(.text.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    wizchip_conf.o(.text.wizchip_setnetinfo) refers to wizchip_conf.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_setnetinfo) refers to wizchip_conf.o(.text.wizchip_setnetinfo) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_getnetinfo) refers to w5500.o(.text.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    wizchip_conf.o(.text.wizchip_getnetinfo) refers to wizchip_conf.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    wizchip_conf.o(.ARM.exidx.text.wizchip_getnetinfo) refers to wizchip_conf.o(.text.wizchip_getnetinfo) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_setnetmode) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.text.wizchip_setnetmode) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.ARM.exidx.text.wizchip_setnetmode) refers to wizchip_conf.o(.text.wizchip_setnetmode) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_getnetmode) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizchip_getnetmode) refers to wizchip_conf.o(.text.wizchip_getnetmode) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_settimeout) refers to w5500.o(.text.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(.ARM.exidx.text.wizchip_settimeout) refers to wizchip_conf.o(.text.wizchip_settimeout) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizchip_gettimeout) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizchip_gettimeout) refers to wizchip_conf.o(.text.wizchip_gettimeout) for [Anonymous Symbol]
+    wizchip_conf.o(.text.wizphy_getphystat) refers to w5500.o(.text.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(.ARM.exidx.text.wizphy_getphystat) refers to wizchip_conf.o(.text.wizphy_getphystat) for [Anonymous Symbol]
+    wizchip_conf.o(.data.WIZCHIP) refers to wizchip_conf.o(.text.wizchip_cris_enter) for wizchip_cris_enter
+    wizchip_conf.o(.data.WIZCHIP) refers to wizchip_conf.o(.text.wizchip_cris_exit) for wizchip_cris_exit
+    wizchip_conf.o(.data.WIZCHIP) refers to wizchip_conf.o(.text.wizchip_cs_select) for wizchip_cs_select
+    wizchip_conf.o(.data.WIZCHIP) refers to wizchip_conf.o(.text.wizchip_cs_deselect) for wizchip_cs_deselect
+    wizchip_conf.o(.data.WIZCHIP) refers to wizchip_conf.o(.text.wizchip_bus_readdata) for wizchip_bus_readdata
+    wizchip_conf.o(.data.WIZCHIP) refers to wizchip_conf.o(.text.wizchip_bus_writedata) for wizchip_bus_writedata
+    nrf_drv_spi.o(.text.nrf_drv_spi_init) refers to nrf_drv_common.o(.text.nrf_drv_common_irq_enable) for nrf_drv_common_irq_enable
+    nrf_drv_spi.o(.text.nrf_drv_spi_init) refers to nrf_drv_spi.o(.bss.m_cb) for [Anonymous Symbol]
+    nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_init) refers to nrf_drv_spi.o(.text.nrf_drv_spi_init) for [Anonymous Symbol]
+    nrf_drv_spi.o(.text.nrf_drv_spi_uninit) refers to nrf_drv_spi.o(.bss.m_cb) for [Anonymous Symbol]
+    nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_uninit) refers to nrf_drv_spi.o(.text.nrf_drv_spi_uninit) for [Anonymous Symbol]
+    nrf_drv_spi.o(.text.nrf_drv_spi_transfer) refers to nrf_drv_spi.o(.text.nrf_drv_spi_xfer) for nrf_drv_spi_xfer
+    nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_transfer) refers to nrf_drv_spi.o(.text.nrf_drv_spi_transfer) for [Anonymous Symbol]
+    nrf_drv_spi.o(.text.nrf_drv_spi_xfer) refers to nrf_drv_spi.o(.text.transfer_byte) for transfer_byte
+    nrf_drv_spi.o(.text.nrf_drv_spi_xfer) refers to nrf_drv_spi.o(.bss.m_cb) for [Anonymous Symbol]
+    nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_xfer) refers to nrf_drv_spi.o(.text.nrf_drv_spi_xfer) for [Anonymous Symbol]
+    nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler) refers to nrf_drv_spi.o(.text.transfer_byte) for transfer_byte
+    nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler) refers to nrf_drv_spi.o(.bss.m_cb) for [Anonymous Symbol]
+    nrf_drv_spi.o(.ARM.exidx.text.SPI0_TWI0_IRQHandler) refers to nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler) for [Anonymous Symbol]
+    nrf_drv_spi.o(.ARM.exidx.text.transfer_byte) refers to nrf_drv_spi.o(.text.transfer_byte) for [Anonymous Symbol]
+    nrf_drv_common.o(.ARM.exidx.text.nrf_drv_common_clock_irq_disable) refers to nrf_drv_common.o(.text.nrf_drv_common_clock_irq_disable) for [Anonymous Symbol]
+    nrf_drv_common.o(.ARM.exidx.text.nrf_drv_common_irq_enable) refers to nrf_drv_common.o(.text.nrf_drv_common_irq_enable) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.SPI_CrisEnter) refers to main.o(.text.SPI_CrisEnter) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.SPI_CrisExit) refers to main.o(.text.SPI_CrisExit) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.SPI_CS_Select) refers to main.o(.text.SPI_CS_Select) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.SPI_CS_Deselect) refers to main.o(.text.SPI_CS_Deselect) for [Anonymous Symbol]
+    main.o(.text.W5500_Reset) refers to hal.o(.text.delay_ms) for delay_ms
+    main.o(.ARM.exidx.text.W5500_Reset) refers to main.o(.text.W5500_Reset) for [Anonymous Symbol]
+    main.o(.text.network_init) refers to wizchip_conf.o(.text.ctlnetwork) for ctlnetwork
+    main.o(.text.network_init) refers to wizchip_conf.o(.text.ctlwizchip) for ctlwizchip
+    main.o(.text.network_init) refers to main.o(.data.gWIZNETINFO) for gWIZNETINFO
+    main.o(.text.network_init) refers to main.o(.rodata.str1.1) for .L.str
+    main.o(.text.network_init) refers to hal.o(.text.UART_Printf) for UART_Printf
+    main.o(.ARM.exidx.text.network_init) refers to main.o(.text.network_init) for [Anonymous Symbol]
+    main.o(.text.main) refers to system_nrf51.o(.data.SystemCoreClock) for SystemCoreClock
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    nrf_it.o(.ARM.exidx.text.GPIOTE_IRQHandler) refers to nrf_it.o(.text.GPIOTE_IRQHandler) for [Anonymous Symbol]
+    nrf_it.o(.text.TIMER0_IRQHandler) refers to hal.o(.bss.delay_us_Ticks) for delay_us_Ticks
+    nrf_it.o(.ARM.exidx.text.TIMER0_IRQHandler) refers to nrf_it.o(.text.TIMER0_IRQHandler) for [Anonymous Symbol]
+    nrf_it.o(.ARM.exidx.text.TIMER1_IRQHandler) refers to nrf_it.o(.text.TIMER1_IRQHandler) for [Anonymous Symbol]
+    nrf_it.o(.text.TIMER2_IRQHandler) refers to hal.o(.bss.delayTicks) for delayTicks
+    nrf_it.o(.text.TIMER2_IRQHandler) refers to hal.o(.bss.uip_timer) for uip_timer
+    nrf_it.o(.text.TIMER2_IRQHandler) refers to hal.o(.bss.SystemNowtime) for SystemNowtime
+    nrf_it.o(.text.TIMER2_IRQHandler) refers to nrf_it.o(.bss.closed_time) for closed_time
+    nrf_it.o(.ARM.exidx.text.TIMER2_IRQHandler) refers to nrf_it.o(.text.TIMER2_IRQHandler) for [Anonymous Symbol]
+    arm_startup_nrf51.o(RESET) refers to arm_startup_nrf51.o(STACK) for __initial_sp
+    arm_startup_nrf51.o(RESET) refers to arm_startup_nrf51.o(.text) for Reset_Handler
+    arm_startup_nrf51.o(RESET) refers to nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler) for SPI0_TWI0_IRQHandler
+    arm_startup_nrf51.o(RESET) refers to nrf_it.o(.text.GPIOTE_IRQHandler) for GPIOTE_IRQHandler
+    arm_startup_nrf51.o(RESET) refers to nrf_it.o(.text.TIMER0_IRQHandler) for TIMER0_IRQHandler
+    arm_startup_nrf51.o(RESET) refers to nrf_it.o(.text.TIMER1_IRQHandler) for TIMER1_IRQHandler
+    arm_startup_nrf51.o(RESET) refers to nrf_it.o(.text.TIMER2_IRQHandler) for TIMER2_IRQHandler
+    arm_startup_nrf51.o(.text) refers to system_nrf51.o(.text.SystemInit) for SystemInit
+    arm_startup_nrf51.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_nrf51.o(.text.SystemCoreClockUpdate) refers to system_nrf51.o(.data.SystemCoreClock) for SystemCoreClock
+    system_nrf51.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_nrf51.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_nrf51.o(.text.SystemInit) refers to system_nrf51.o(.data.SystemCoreClock) for SystemCoreClock
+    system_nrf51.o(.ARM.exidx.text.SystemInit) refers to system_nrf51.o(.text.SystemInit) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to arm_startup_nrf51.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to arm_startup_nrf51.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    fputc.o(i.fputc) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
+    fputc.o(i.fputc) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fputc_h.o(i._fputc$hlt) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
+    fputc_h.o(i._fputc$hlt) refers (Special) to semi.o(.text) for __semihosting_library_function
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    depilogue.o(i.__ARM_clz) refers (Special) to iusefp.o(.text) for __I$use$fp
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing hal.o(.text), (0 bytes).
+    Removing hal.o(.text.halInit), (376 bytes).
+    Removing hal.o(.ARM.exidx.text.halInit), (8 bytes).
+    Removing hal.o(.text.delay_ms), (16 bytes).
+    Removing hal.o(.ARM.exidx.text.delay_ms), (8 bytes).
+    Removing hal.o(.text.UART_Printf), (56 bytes).
+    Removing hal.o(.ARM.exidx.text.UART_Printf), (8 bytes).
+    Removing hal.o(.text.IR_SendData), (24 bytes).
+    Removing hal.o(.ARM.exidx.text.IR_SendData), (8 bytes).
+    Removing hal.o(.text.putchar), (28 bytes).
+    Removing hal.o(.ARM.exidx.text.putchar), (8 bytes).
+    Removing hal.o(.text.Uart_SendData), (24 bytes).
+    Removing hal.o(.ARM.exidx.text.Uart_SendData), (8 bytes).
+    Removing hal.o(.text.Uart_SendStr), (24 bytes).
+    Removing hal.o(.ARM.exidx.text.Uart_SendStr), (8 bytes).
+    Removing hal.o(.text.GetSystemNowtime), (12 bytes).
+    Removing hal.o(.ARM.exidx.text.GetSystemNowtime), (8 bytes).
+    Removing hal.o(.text.nrf_timer_delay_ms), (72 bytes).
+    Removing hal.o(.ARM.exidx.text.nrf_timer_delay_ms), (8 bytes).
+    Removing hal.o(.text.delay_us), (16 bytes).
+    Removing hal.o(.ARM.exidx.text.delay_us), (8 bytes).
+    Removing hal.o(.text.IR_SendByte), (60 bytes).
+    Removing hal.o(.ARM.exidx.text.IR_SendByte), (8 bytes).
+    Removing hal.o(.text.SPI_ReadWriteByte), (52 bytes).
+    Removing hal.o(.ARM.exidx.text.SPI_ReadWriteByte), (8 bytes).
+    Removing hal.o(.text.SPI_WriteByte), (24 bytes).
+    Removing hal.o(.ARM.exidx.text.SPI_WriteByte), (8 bytes).
+    Removing hal.o(.text.SPI_ReadByte), (28 bytes).
+    Removing hal.o(.ARM.exidx.text.SPI_ReadByte), (8 bytes).
+    Removing hal.o(.text.comCRC8), (18 bytes).
+    Removing hal.o(.ARM.exidx.text.comCRC8), (8 bytes).
+    Removing hal.o(.rodata.m_spi_master_0), (8 bytes).
+    Removing w5500.o(.text), (0 bytes).
+    Removing w5500.o(.text.WIZCHIP_READ), (88 bytes).
+    Removing w5500.o(.ARM.exidx.text.WIZCHIP_READ), (8 bytes).
+    Removing w5500.o(.text.WIZCHIP_WRITE), (88 bytes).
+    Removing w5500.o(.ARM.exidx.text.WIZCHIP_WRITE), (8 bytes).
+    Removing w5500.o(.text.WIZCHIP_READ_BUF), (108 bytes).
+    Removing w5500.o(.ARM.exidx.text.WIZCHIP_READ_BUF), (8 bytes).
+    Removing w5500.o(.text.WIZCHIP_WRITE_BUF), (112 bytes).
+    Removing w5500.o(.ARM.exidx.text.WIZCHIP_WRITE_BUF), (8 bytes).
+    Removing w5500.o(.text.getSn_TX_FSR), (64 bytes).
+    Removing w5500.o(.ARM.exidx.text.getSn_TX_FSR), (8 bytes).
+    Removing w5500.o(.text.getSn_RX_RSR), (62 bytes).
+    Removing w5500.o(.ARM.exidx.text.getSn_RX_RSR), (8 bytes).
+    Removing w5500.o(.text.wiz_send_data), (80 bytes).
+    Removing w5500.o(.ARM.exidx.text.wiz_send_data), (8 bytes).
+    Removing w5500.o(.text.wiz_recv_data), (80 bytes).
+    Removing w5500.o(.ARM.exidx.text.wiz_recv_data), (8 bytes).
+    Removing w5500.o(.text.wiz_recv_ignore), (58 bytes).
+    Removing w5500.o(.ARM.exidx.text.wiz_recv_ignore), (8 bytes).
+    Removing socket.o(.text), (0 bytes).
+    Removing socket.o(.text.socket), (288 bytes).
+    Removing socket.o(.ARM.exidx.text.socket), (8 bytes).
+    Removing socket.o(.text.close), (104 bytes).
+    Removing socket.o(.ARM.exidx.text.close), (8 bytes).
+    Removing socket.o(.text.listen), (100 bytes).
+    Removing socket.o(.ARM.exidx.text.listen), (8 bytes).
+    Removing socket.o(.text.connect), (284 bytes).
+    Removing socket.o(.ARM.exidx.text.connect), (8 bytes).
+    Removing socket.o(.text.disconnect), (152 bytes).
+    Removing socket.o(.ARM.exidx.text.disconnect), (8 bytes).
+    Removing socket.o(.text.send), (280 bytes).
+    Removing socket.o(.ARM.exidx.text.send), (8 bytes).
+    Removing socket.o(.text.recv), (248 bytes).
+    Removing socket.o(.ARM.exidx.text.recv), (8 bytes).
+    Removing socket.o(.text.sendto), (360 bytes).
+    Removing socket.o(.ARM.exidx.text.sendto), (8 bytes).
+    Removing socket.o(.text.recvfrom), (564 bytes).
+    Removing socket.o(.ARM.exidx.text.recvfrom), (8 bytes).
+    Removing socket.o(.text.ctlsocket), (212 bytes).
+    Removing socket.o(.ARM.exidx.text.ctlsocket), (8 bytes).
+    Removing socket.o(.text.setsockopt), (254 bytes).
+    Removing socket.o(.ARM.exidx.text.setsockopt), (8 bytes).
+    Removing socket.o(.text.getsockopt), (276 bytes).
+    Removing socket.o(.ARM.exidx.text.getsockopt), (8 bytes).
+    Removing socket.o(.data.sock_any_port), (2 bytes).
+    Removing socket.o(.bss..L_MergedGlobals), (28 bytes).
+    Removing wizchip_conf.o(.text), (0 bytes).
+    Removing wizchip_conf.o(.text.wizchip_cris_enter), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_cris_enter), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_cris_exit), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_cris_exit), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_cs_select), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_cs_select), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_cs_deselect), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_cs_deselect), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_bus_readdata), (4 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_bus_readdata), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_bus_writedata), (4 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_bus_writedata), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_spi_readbyte), (4 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_spi_readbyte), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_spi_writebyte), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_spi_writebyte), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_spi_readburst), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_spi_readburst), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_spi_writeburst), (2 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_spi_writeburst), (8 bytes).
+    Removing wizchip_conf.o(.text.reg_wizchip_cris_cbfunc), (48 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.reg_wizchip_cris_cbfunc), (8 bytes).
+    Removing wizchip_conf.o(.text.reg_wizchip_cs_cbfunc), (48 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.reg_wizchip_cs_cbfunc), (8 bytes).
+    Removing wizchip_conf.o(.text.reg_wizchip_bus_cbfunc), (56 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.reg_wizchip_bus_cbfunc), (8 bytes).
+    Removing wizchip_conf.o(.text.reg_wizchip_spi_cbfunc), (56 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.reg_wizchip_spi_cbfunc), (8 bytes).
+    Removing wizchip_conf.o(.text.reg_wizchip_spiburst_cbfunc), (56 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.reg_wizchip_spiburst_cbfunc), (8 bytes).
+    Removing wizchip_conf.o(.text.ctlwizchip), (220 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.ctlwizchip), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_sw_reset), (128 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_sw_reset), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_init), (140 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_init), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_clrinterrupt), (28 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_clrinterrupt), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_getinterrupt), (28 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_getinterrupt), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_setinterruptmask), (26 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_setinterruptmask), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_getinterruptmask), (26 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_getinterruptmask), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_reset), (40 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_reset), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_setphyconf), (64 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_setphyconf), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_getphyconf), (96 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_getphyconf), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_setphypmode), (78 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_setphypmode), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_getphypmode), (22 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_getphypmode), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_getphylink), (16 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_getphylink), (8 bytes).
+    Removing wizchip_conf.o(.text.ctlnetwork), (78 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.ctlnetwork), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_setnetinfo), (84 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_setnetinfo), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_getnetinfo), (84 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_getnetinfo), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_setnetmode), (36 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_setnetmode), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_getnetmode), (10 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_getnetmode), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_settimeout), (36 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_settimeout), (8 bytes).
+    Removing wizchip_conf.o(.text.wizchip_gettimeout), (40 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizchip_gettimeout), (8 bytes).
+    Removing wizchip_conf.o(.text.wizphy_getphystat), (26 bytes).
+    Removing wizchip_conf.o(.ARM.exidx.text.wizphy_getphystat), (8 bytes).
+    Removing wizchip_conf.o(.data.WIZCHIP), (44 bytes).
+    Removing wizchip_conf.o(.bss..L_MergedGlobals), (5 bytes).
+    Removing nrf_drv_spi.o(.text), (0 bytes).
+    Removing nrf_drv_spi.o(.text.nrf_drv_spi_init), (284 bytes).
+    Removing nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_init), (8 bytes).
+    Removing nrf_drv_spi.o(.text.nrf_drv_spi_uninit), (88 bytes).
+    Removing nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_uninit), (8 bytes).
+    Removing nrf_drv_spi.o(.text.nrf_drv_spi_transfer), (26 bytes).
+    Removing nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_transfer), (8 bytes).
+    Removing nrf_drv_spi.o(.text.nrf_drv_spi_xfer), (256 bytes).
+    Removing nrf_drv_spi.o(.ARM.exidx.text.nrf_drv_spi_xfer), (8 bytes).
+    Removing nrf_drv_spi.o(.ARM.exidx.text.SPI0_TWI0_IRQHandler), (8 bytes).
+    Removing nrf_drv_spi.o(.ARM.exidx.text.transfer_byte), (8 bytes).
+    Removing nrf_drv_common.o(.text), (0 bytes).
+    Removing nrf_drv_common.o(.text.nrf_drv_common_clock_irq_disable), (20 bytes).
+    Removing nrf_drv_common.o(.ARM.exidx.text.nrf_drv_common_clock_irq_disable), (8 bytes).
+    Removing nrf_drv_common.o(.text.nrf_drv_common_irq_enable), (108 bytes).
+    Removing nrf_drv_common.o(.ARM.exidx.text.nrf_drv_common_irq_enable), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.text.SPI_CrisEnter), (8 bytes).
+    Removing main.o(.ARM.exidx.text.SPI_CrisEnter), (8 bytes).
+    Removing main.o(.text.SPI_CrisExit), (8 bytes).
+    Removing main.o(.ARM.exidx.text.SPI_CrisExit), (8 bytes).
+    Removing main.o(.text.SPI_CS_Select), (16 bytes).
+    Removing main.o(.ARM.exidx.text.SPI_CS_Select), (8 bytes).
+    Removing main.o(.text.SPI_CS_Deselect), (16 bytes).
+    Removing main.o(.ARM.exidx.text.SPI_CS_Deselect), (8 bytes).
+    Removing main.o(.text.W5500_Reset), (32 bytes).
+    Removing main.o(.ARM.exidx.text.W5500_Reset), (8 bytes).
+    Removing main.o(.text.network_init), (304 bytes).
+    Removing main.o(.ARM.exidx.text.network_init), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.data.memsize), (16 bytes).
+    Removing main.o(.data.gWIZNETINFO), (23 bytes).
+    Removing main.o(.rodata.str1.1), (68 bytes).
+    Removing main.o(.bss.gDATABUF), (2048 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing nrf_it.o(.text), (0 bytes).
+    Removing nrf_it.o(.ARM.exidx.text.GPIOTE_IRQHandler), (8 bytes).
+    Removing nrf_it.o(.ARM.exidx.text.TIMER0_IRQHandler), (8 bytes).
+    Removing nrf_it.o(.ARM.exidx.text.TIMER1_IRQHandler), (8 bytes).
+    Removing nrf_it.o(.ARM.exidx.text.TIMER2_IRQHandler), (8 bytes).
+    Removing arm_startup_nrf51.o(HEAP), (2048 bytes).
+    Removing system_nrf51.o(.text), (0 bytes).
+    Removing system_nrf51.o(.text.SystemCoreClockUpdate), (16 bytes).
+    Removing system_nrf51.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_nrf51.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing dadd.o(.text), (356 bytes).
+    Removing dmul.o(.text), (208 bytes).
+    Removing ddiv.o(.text), (240 bytes).
+    Removing dfixul.o(.text), (64 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+205 unused section(s) (total 13652 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
+    ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc_h.o ABSOLUTE
+    ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    RTE/Device/nRF51802_xxAA/arm_startup_nrf51.s 0x00000000   Number         0  arm_startup_nrf51.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    hal.c                                    0x00000000   Number         0  hal.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    nrf_drv_common.c                         0x00000000   Number         0  nrf_drv_common.o ABSOLUTE
+    nrf_drv_spi.c                            0x00000000   Number         0  nrf_drv_spi.o ABSOLUTE
+    nrf_it.c                                 0x00000000   Number         0  nrf_it.o ABSOLUTE
+    socket.c                                 0x00000000   Number         0  socket.o ABSOLUTE
+    system_nrf51.c                           0x00000000   Number         0  system_nrf51.o ABSOLUTE
+    w5500.c                                  0x00000000   Number         0  w5500.o ABSOLUTE
+    wizchip_conf.c                           0x00000000   Number         0  wizchip_conf.o ABSOLUTE
+    RESET                                    0x00000000   Section      192  arm_startup_nrf51.o(RESET)
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d4   Section       56  arm_startup_nrf51.o(.text)
+    .text                                    0x0000010c   Section       36  init.o(.text)
+    [Anonymous Symbol]                       0x00000130   Section        0  nrf_it.o(.text.GPIOTE_IRQHandler)
+    [Anonymous Symbol]                       0x00000134   Section        0  nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler)
+    __arm_cp.4_0                             0x00000164   Number         4  nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler)
+    __arm_cp.4_1                             0x00000168   Number         4  nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler)
+    __arm_cp.4_2                             0x0000016c   Number         4  nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler)
+    [Anonymous Symbol]                       0x00000170   Section        0  system_nrf51.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00000178   Section        0  nrf_it.o(.text.TIMER0_IRQHandler)
+    __arm_cp.1_0                             0x000001a4   Number         4  nrf_it.o(.text.TIMER0_IRQHandler)
+    __arm_cp.1_1                             0x000001a8   Number         4  nrf_it.o(.text.TIMER0_IRQHandler)
+    __arm_cp.1_2                             0x000001ac   Number         4  nrf_it.o(.text.TIMER0_IRQHandler)
+    __arm_cp.1_3                             0x000001b0   Number         4  nrf_it.o(.text.TIMER0_IRQHandler)
+    [Anonymous Symbol]                       0x000001b4   Section        0  nrf_it.o(.text.TIMER1_IRQHandler)
+    [Anonymous Symbol]                       0x000001b8   Section        0  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_0                             0x00000200   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_1                             0x00000204   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_2                             0x00000208   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_3                             0x0000020c   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_4                             0x00000210   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_5                             0x00000214   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    __arm_cp.3_6                             0x00000218   Number         4  nrf_it.o(.text.TIMER2_IRQHandler)
+    [Anonymous Symbol]                       0x0000021c   Section        0  main.o(.text.main)
+    __arm_cp.6_0                             0x0000026c   Number         4  main.o(.text.main)
+    __arm_cp.6_1                             0x00000270   Number         4  main.o(.text.main)
+    __arm_cp.6_2                             0x00000274   Number         4  main.o(.text.main)
+    __arm_cp.6_3                             0x00000278   Number         4  main.o(.text.main)
+    transfer_byte                            0x0000027d   Thumb Code    86  nrf_drv_spi.o(.text.transfer_byte)
+    [Anonymous Symbol]                       0x0000027c   Section        0  nrf_drv_spi.o(.text.transfer_byte)
+    i.__scatterload_copy                     0x000002d2   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000002e0   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000002e2   Section       14  handlers.o(i.__scatterload_zeroinit)
+    __tagsym$$used.0                         0x20000000   Number         0  system_nrf51.o(.data.SystemCoreClock)
+    m_cb                                     0x20000014   Data          32  nrf_drv_spi.o(.bss.m_cb)
+    [Anonymous Symbol]                       0x20000014   Section        0  nrf_drv_spi.o(.bss.m_cb)
+    STACK                                    0x20000038   Section     2048  arm_startup_nrf51.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  arm_startup_nrf51.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  arm_startup_nrf51.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  arm_startup_nrf51.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000d5   Thumb Code    26  arm_startup_nrf51.o(.text)
+    NMI_Handler                              0x000000ef   Thumb Code     2  arm_startup_nrf51.o(.text)
+    HardFault_Handler                        0x000000f1   Thumb Code     2  arm_startup_nrf51.o(.text)
+    SVC_Handler                              0x000000f3   Thumb Code     2  arm_startup_nrf51.o(.text)
+    PendSV_Handler                           0x000000f5   Thumb Code     2  arm_startup_nrf51.o(.text)
+    SysTick_Handler                          0x000000f7   Thumb Code     2  arm_startup_nrf51.o(.text)
+    ADC_IRQHandler                           0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    CCM_AAR_IRQHandler                       0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    ECB_IRQHandler                           0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    LPCOMP_IRQHandler                        0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    POWER_CLOCK_IRQHandler                   0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    QDEC_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    RADIO_IRQHandler                         0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    RNG_IRQHandler                           0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    RTC0_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    RTC1_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SPI1_TWI1_IRQHandler                     0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SWI0_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SWI1_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SWI2_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SWI3_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SWI4_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    SWI5_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    TEMP_IRQHandler                          0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    UART0_IRQHandler                         0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    WDT_IRQHandler                           0x000000f9   Thumb Code     0  arm_startup_nrf51.o(.text)
+    __scatterload                            0x0000010d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0000010d   Thumb Code     0  init.o(.text)
+    GPIOTE_IRQHandler                        0x00000131   Thumb Code     2  nrf_it.o(.text.GPIOTE_IRQHandler)
+    SPI0_TWI0_IRQHandler                     0x00000135   Thumb Code    60  nrf_drv_spi.o(.text.SPI0_TWI0_IRQHandler)
+    SystemInit                               0x00000171   Thumb Code     8  system_nrf51.o(.text.SystemInit)
+    TIMER0_IRQHandler                        0x00000179   Thumb Code    60  nrf_it.o(.text.TIMER0_IRQHandler)
+    TIMER1_IRQHandler                        0x000001b5   Thumb Code     2  nrf_it.o(.text.TIMER1_IRQHandler)
+    TIMER2_IRQHandler                        0x000001b9   Thumb Code   100  nrf_it.o(.text.TIMER2_IRQHandler)
+    main                                     0x0000021d   Thumb Code    96  main.o(.text.main)
+    __scatterload_copy                       0x000002d3   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000002e1   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000002e3   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x000002f0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000310   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_nrf51.o(.data.SystemCoreClock)
+    SystemNowtime                            0x20000008   Data           4  hal.o(.bss.SystemNowtime)
+    closed_time                              0x2000000c   Data           2  nrf_it.o(.bss.closed_time)
+    delayTicks                               0x2000000e   Data           2  hal.o(.bss.delayTicks)
+    delay_us_Ticks                           0x20000010   Data           2  hal.o(.bss.delay_us_Ticks)
+    uip_timer                                0x20000034   Data           4  hal.o(.bss.uip_timer)
+    __initial_sp                             0x20000838   Data           0  arm_startup_nrf51.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000318, Max: 0x00040000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000310, Max: 0x00040000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO          264    RESET               arm_startup_nrf51.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO          283  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO          316    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO          319    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          321    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          323    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO          324    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          326    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          328    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO          317    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x000000d4   0x00000038   Code   RO          265    .text               arm_startup_nrf51.o
+    0x0000010c   0x0000010c   0x00000024   Code   RO          350    .text               mc_p.l(init.o)
+    0x00000130   0x00000130   0x00000002   Code   RO          247    .text.GPIOTE_IRQHandler  nrf_it.o
+    0x00000132   0x00000132   0x00000002   PAD
+    0x00000134   0x00000134   0x0000003c   Code   RO          195    .text.SPI0_TWI0_IRQHandler  nrf_drv_spi.o
+    0x00000170   0x00000170   0x00000008   Code   RO          274    .text.SystemInit    system_nrf51.o
+    0x00000178   0x00000178   0x0000003c   Code   RO          249    .text.TIMER0_IRQHandler  nrf_it.o
+    0x000001b4   0x000001b4   0x00000002   Code   RO          251    .text.TIMER1_IRQHandler  nrf_it.o
+    0x000001b6   0x000001b6   0x00000002   PAD
+    0x000001b8   0x000001b8   0x00000064   Code   RO          253    .text.TIMER2_IRQHandler  nrf_it.o
+    0x0000021c   0x0000021c   0x00000060   Code   RO          232    .text.main          main.o
+    0x0000027c   0x0000027c   0x00000056   Code   RO          197    .text.transfer_byte  nrf_drv_spi.o
+    0x000002d2   0x000002d2   0x0000000e   Code   RO          366    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x000002e0   0x000002e0   0x00000002   Code   RO          367    i.__scatterload_null  mc_p.l(handlers.o)
+    0x000002e2   0x000002e2   0x0000000e   Code   RO          368    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x000002f0   0x000002f0   0x00000020   Data   RO          365    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00000310, Size: 0x00000838, Max: 0x00004000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000310   0x00000004   Data   RW          276    .data.SystemCoreClock  system_nrf51.o
+    0x20000004   0x00000314   0x00000004   PAD
+    0x20000008        -       0x00000004   Zero   RW           34    .bss.SystemNowtime  hal.o
+    0x2000000c        -       0x00000002   Zero   RW          255    .bss.closed_time    nrf_it.o
+    0x2000000e        -       0x00000002   Zero   RW           33    .bss.delayTicks     hal.o
+    0x20000010        -       0x00000002   Zero   RW           35    .bss.delay_us_Ticks  hal.o
+    0x20000012   0x00000314   0x00000002   PAD
+    0x20000014        -       0x00000020   Zero   RW          199    .bss.m_cb           nrf_drv_spi.o
+    0x20000034        -       0x00000004   Zero   RW           32    .bss.uip_timer      hal.o
+    0x20000038        -       0x00000800   Zero   RW          262    STACK               arm_startup_nrf51.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        56         18        192          0       2048        640   arm_startup_nrf51.o
+         0          0          0          0         12      15527   hal.o
+        96         16          0          0          0       4469   main.o
+       146         12          0          0         32      13875   nrf_drv_spi.o
+       164         44          0          0          2       1852   nrf_it.o
+         8          0          0          4          0       1245   system_nrf51.o
+
+    ----------------------------------------------------------------------
+       474         90        224          4       2100      37608   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         4          0          0          0          6          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        86         16          0          0          0         68   mc_p.l
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       560        106        224          4       2100      37780   Grand Totals
+       560        106        224          4       2100      37780   ELF Image Totals
+       560        106        224          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  784 (   0.77kB)
+    Total RW  Size (RW Data + ZI Data)              2104 (   2.05kB)
+    Total ROM Size (Code + RO Data + RW Data)        788 (   0.77kB)
+
+==============================================================================
+

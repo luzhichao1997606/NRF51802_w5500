@@ -1,0 +1,2550 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 qilai, 1, LIC=32B1Q-N7YG1-454T5-GBKPT-DXARV-09U13
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.30.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.3.0
+Target DLL:      UL2CM3.DLL V1.163.3.0
+Dialog DLL:      TARMCM1.DLL V1.14.2.0
+ 
+<h2>Project:</h2>
+C:\Users\qilai\Desktop\NRF51802_w5500\NET.uvprojx
+Project File Date:  06/12/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+HARDWARE/w5500/Ethernet/socket.c(70): warning: no previous extern declaration for non-static variable 'sock_pack_info' [-Wmissing-variable-declarations]
+uint8_t  sock_pack_info[_WIZCHIP_SOCK_NUM_] = {0,};
+         ^
+HARDWARE/w5500/Ethernet/socket.c(70): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t  sock_pack_info[_WIZCHIP_SOCK_NUM_] = {0,};
+^
+HARDWARE/w5500/Ethernet/socket.c(107): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        CHECK_SOCKNUM();
+                       ^
+HARDWARE/w5500/Ethernet/socket.c(173): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+           setSn_MR(sn, (protocol | (flag & 0xF0)));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1649): note: expanded from macro 'setSn_MR'
+                WIZCHIP_WRITE(Sn_MR(sn),mr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(180): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_PORT(sn,port); 
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1738): note: expanded from macro 'setSn_PORT'
+                WIZCHIP_WRITE(Sn_PORT(sn),   (uint8_t)(port >> 8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(509): note: expanded from macro 'Sn_PORT'
+#define Sn_PORT(N)         (_W5500_IO_BASE_ + (0x0004 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(180): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_PORT(sn,port); 
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1739): note: expanded from macro 'setSn_PORT'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_PORT(sn),1), (uint8_t) port); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(180): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   setSn_PORT(sn,port); 
+                      ^
+HARDWARE/w5500/Ethernet/socket.c(181): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_CR(sn,Sn_CR_OPEN);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(182): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_CR(sn));
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(193): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_SR(sn) == SOCK_CLOSED);
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(121): warning: unannotated fall-through between switch labels [-Wimplicit-fallthrough]
+      case Sn_MR_UDP :
+      ^
+HARDWARE/w5500/Ethernet/socket.c(121): note: insert 'break;' to avoid fall-through
+      case Sn_MR_UDP :
+      ^
+      break; 
+HARDWARE/w5500/Ethernet/socket.c(199): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        CHECK_SOCKNUM();
+                       ^
+HARDWARE/w5500/Ethernet/socket.c(225): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_CR(sn,Sn_CR_CLOSE);
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(227): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while( getSn_CR(sn) );
+               ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(229): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_IR(sn, 0xFF);
+        ^~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(236): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while(getSn_SR(sn) != SOCK_CLOSED);
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(242): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        CHECK_SOCKNUM();
+                       ^
+HARDWARE/w5500/Ethernet/socket.c(243): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        CHECK_SOCKMODE(Sn_MR_TCP);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(243): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        CHECK_SOCKMODE(Sn_MR_TCP);
+                                 ^
+HARDWARE/w5500/Ethernet/socket.c(244): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        CHECK_SOCKINIT();
+        ^~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(95): note: expanded from macro 'CHECK_SOCKINIT'
+      if((getSn_SR(sn) != SOCK_INIT)) return SOCKERR_SOCKINIT; \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(244): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        CHECK_SOCKINIT();
+                        ^
+HARDWARE/w5500/Ethernet/socket.c(245): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_CR(sn,Sn_CR_LISTEN);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(246): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while(getSn_CR(sn));
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(247): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_SR(sn) != SOCK_LISTEN)
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(246): warning: while loop has empty body [-Wempty-body]
+        while(getSn_CR(sn));
+                           ^
+HARDWARE/w5500/Ethernet/socket.c(246): note: put the semicolon on a separate line to silence this warning
+HARDWARE/w5500/Ethernet/socket.c(259): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(260): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(260): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+                            ^
+HARDWARE/w5500/Ethernet/socket.c(261): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   CHECK_SOCKINIT();
+   ^~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(95): note: expanded from macro 'CHECK_SOCKINIT'
+      if((getSn_SR(sn) != SOCK_INIT)) return SOCKERR_SOCKINIT; \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(261): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKINIT();
+                   ^
+HARDWARE/w5500/Ethernet/socket.c(275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_DIPR(sn,addr);
+        ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1785): note: expanded from macro 'setSn_DIPR'
+                WIZCHIP_WRITE_BUF(Sn_DIPR(sn), dipr, 4)
+                ~~~~~~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(527): note: expanded from macro 'Sn_DIPR'
+#define Sn_DIPR(N)         (_W5500_IO_BASE_ + (0x000C << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(276): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_DPORT(sn,port);
+        ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1805): note: expanded from macro 'setSn_DPORT'
+                WIZCHIP_WRITE(Sn_DPORT(sn),   (uint8_t) (dport>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(537): note: expanded from macro 'Sn_DPORT'
+#define Sn_DPORT(N)        (_W5500_IO_BASE_ + (0x0010 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(276): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_DPORT(sn,port);
+        ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1806): note: expanded from macro 'setSn_DPORT'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_DPORT(sn),1), (uint8_t)  dport); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(276): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        setSn_DPORT(sn,port);
+                            ^
+HARDWARE/w5500/Ethernet/socket.c(277): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_CR(sn,Sn_CR_CONNECT);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(278): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_CR(sn));
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(280): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_SR(sn) != SOCK_ESTABLISHED)
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(282): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                if ((getSn_IR(sn) & Sn_IR_TIMEOUT)||(closed_time > 2000))
+                     ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1699): note: expanded from macro 'getSn_IR'
+                (WIZCHIP_READ(Sn_IR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(284): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        setSn_IR(sn, Sn_IR_TIMEOUT);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(288): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                if (getSn_SR(sn) == SOCK_CLOSED)
+                    ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(300): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(301): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(301): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+                            ^
+HARDWARE/w5500/Ethernet/socket.c(302): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_CR(sn,Sn_CR_DISCON);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(304): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while(getSn_CR(sn));
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(307): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while(getSn_SR(sn) != SOCK_CLOSED)
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(309): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+           if((getSn_IR(sn) & Sn_IR_TIMEOUT)||(closed_time > 500))
+               ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1699): note: expanded from macro 'getSn_IR'
+                (WIZCHIP_READ(Sn_IR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(324): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(325): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(325): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+                            ^
+HARDWARE/w5500/Ethernet/socket.c(326): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKDATA();
+                   ^
+HARDWARE/w5500/Ethernet/socket.c(327): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   tmp = getSn_SR(sn);
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(331): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      tmp = getSn_IR(sn);
+            ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1699): note: expanded from macro 'getSn_IR'
+                (WIZCHIP_READ(Sn_IR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(334): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_IR(sn, Sn_IR_SENDOK);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(354): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   freesize = getSn_TxMAX(sn);
+            ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+HARDWARE/w5500/Ethernet/socket.c(354): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   freesize = getSn_TxMAX(sn);
+              ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                            ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1932): note: expanded from macro 'getSn_TXBUF_SIZE'
+                WIZCHIP_READ(Sn_TXBUF_SIZE(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(591): note: expanded from macro 'Sn_TXBUF_SIZE'
+#define Sn_TXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(359): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      tmp = getSn_SR(sn);
+            ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(377): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_CR(sn,Sn_CR_SEND);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(379): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_CR(sn));
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(397): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(398): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(398): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKMODE(Sn_MR_TCP);
+                            ^
+HARDWARE/w5500/Ethernet/socket.c(399): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKDATA();
+                   ^
+HARDWARE/w5500/Ethernet/socket.c(401): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   recvsize = getSn_RxMAX(sn);
+            ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2098): note: expanded from macro 'getSn_RxMAX'
+                (((uint16_t)getSn_RXBUF_SIZE(sn)) << 10)                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+HARDWARE/w5500/Ethernet/socket.c(401): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   recvsize = getSn_RxMAX(sn);
+              ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2098): note: expanded from macro 'getSn_RxMAX'
+                (((uint16_t)getSn_RXBUF_SIZE(sn)) << 10)                
+                            ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1912): note: expanded from macro 'getSn_RXBUF_SIZE'
+                WIZCHIP_READ(Sn_RXBUF_SIZE(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(580): note: expanded from macro 'Sn_RXBUF_SIZE'
+#define Sn_RXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001E << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(414): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         tmp = getSn_SR(sn);
+               ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(420): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+               else if(getSn_TX_FSR(sn) == getSn_TxMAX(sn))
+                                           ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                            ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1932): note: expanded from macro 'getSn_TXBUF_SIZE'
+                WIZCHIP_READ(Sn_TXBUF_SIZE(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(591): note: expanded from macro 'Sn_TXBUF_SIZE'
+#define Sn_TXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(434): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      };
+       ^
+HARDWARE/w5500/Ethernet/socket.c(483): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_CR(sn,Sn_CR_RECV);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(484): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   while(getSn_CR(sn));
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(498): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(499): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   switch(getSn_MR(sn) & 0x0F)
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(511): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKDATA();
+                   ^
+HARDWARE/w5500/Ethernet/socket.c(523): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   if((taddr == 0) && ((getSn_MR(sn)&Sn_MR_MACRAW) != Sn_MR_MACRAW)) return SOCKERR_IPINVALID;
+                        ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(524): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   if((port  == 0) && ((getSn_MR(sn)&Sn_MR_MACRAW) != Sn_MR_MACRAW)) return SOCKERR_PORTZERO;
+                        ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(525): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   tmp = getSn_SR(sn);
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(532): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_DIPR(sn,addr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1785): note: expanded from macro 'setSn_DIPR'
+                WIZCHIP_WRITE_BUF(Sn_DIPR(sn), dipr, 4)
+                ~~~~~~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(527): note: expanded from macro 'Sn_DIPR'
+#define Sn_DIPR(N)         (_W5500_IO_BASE_ + (0x000C << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(533): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_DPORT(sn,port);      
+   ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1805): note: expanded from macro 'setSn_DPORT'
+                WIZCHIP_WRITE(Sn_DPORT(sn),   (uint8_t) (dport>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(537): note: expanded from macro 'Sn_DPORT'
+#define Sn_DPORT(N)        (_W5500_IO_BASE_ + (0x0010 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(533): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_DPORT(sn,port);      
+   ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1806): note: expanded from macro 'setSn_DPORT'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_DPORT(sn),1), (uint8_t)  dport); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(533): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   setSn_DPORT(sn,port);      
+                       ^~
+HARDWARE/w5500/Ethernet/socket.c(534): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   freesize = getSn_TxMAX(sn);
+            ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+HARDWARE/w5500/Ethernet/socket.c(534): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   freesize = getSn_TxMAX(sn);
+              ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                            ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1932): note: expanded from macro 'getSn_TXBUF_SIZE'
+                WIZCHIP_READ(Sn_TXBUF_SIZE(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(591): note: expanded from macro 'Sn_TXBUF_SIZE'
+#define Sn_TXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(539): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      if(getSn_SR(sn) == SOCK_CLOSED) return SOCKERR_SOCKCLOSED;
+         ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(542): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   };
+    ^
+HARDWARE/w5500/Ethernet/socket.c(560): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_CR(sn,Sn_CR_SEND);
+        ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(562): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while(getSn_CR(sn));
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(565): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      tmp = getSn_IR(sn);
+            ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1699): note: expanded from macro 'getSn_IR'
+                (WIZCHIP_READ(Sn_IR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(568): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_IR(sn, Sn_IR_SENDOK);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(575): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_IR(sn, Sn_IR_TIMEOUT);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(562): warning: while loop has empty body [-Wempty-body]
+        while(getSn_CR(sn));
+                           ^
+HARDWARE/w5500/Ethernet/socket.c(562): note: put the semicolon on a separate line to silence this warning
+HARDWARE/w5500/Ethernet/socket.c(609): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(616): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   switch((mr=getSn_MR(sn)) & 0x0F)
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(629): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKDATA();
+                   ^
+HARDWARE/w5500/Ethernet/socket.c(635): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         if(getSn_SR(sn) == SOCK_CLOSED) return SOCKERR_SOCKCLOSED;
+            ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(638): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      };
+       ^
+HARDWARE/w5500/Ethernet/socket.c(648): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        setSn_CR(sn,Sn_CR_RECV);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(649): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        while(getSn_CR(sn));
+                              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(672): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        *port = (*port << 8) + head[5];
+                              ~ ~~~~~~~~~~~~~^~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(674): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        sock_remained_size[sn] = (sock_remained_size[sn] << 8) + head[7];
+                                               ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(649): warning: while loop has empty body [-Wempty-body]
+                        while(getSn_CR(sn));
+                                           ^
+HARDWARE/w5500/Ethernet/socket.c(649): note: put the semicolon on a separate line to silence this warning
+HARDWARE/w5500/Ethernet/socket.c(702): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        setSn_CR(sn,Sn_CR_RECV);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(703): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        while(getSn_CR(sn));
+                              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(706): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        sock_remained_size[sn] = (sock_remained_size[sn] <<8) + head[1] -2;
+                                               ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+HARDWARE/w5500/Ethernet/socket.c(703): warning: while loop has empty body [-Wempty-body]
+                        while(getSn_CR(sn));
+                                           ^
+HARDWARE/w5500/Ethernet/socket.c(703): note: put the semicolon on a separate line to silence this warning
+HARDWARE/w5500/Ethernet/socket.c(729): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        setSn_CR(sn,Sn_CR_RECV);
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(730): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        while(getSn_CR(sn));
+                              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(738): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        sock_remained_size[sn] = (sock_remained_size[sn] << 8) + head[5];
+                                               ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(754): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        setSn_CR(sn,Sn_CR_RECV);
+        ^~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(756): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        while(getSn_CR(sn)) ;
+              ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(781): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(797): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+         *((uint16_t*)arg) = getSn_TxMAX(sn);
+                           ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+HARDWARE/w5500/Ethernet/socket.c(797): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *((uint16_t*)arg) = getSn_TxMAX(sn);
+                             ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2112): note: expanded from macro 'getSn_TxMAX'
+                (((uint16_t)getSn_TXBUF_SIZE(sn)) << 10)                
+                            ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1932): note: expanded from macro 'getSn_TXBUF_SIZE'
+                WIZCHIP_READ(Sn_TXBUF_SIZE(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(591): note: expanded from macro 'Sn_TXBUF_SIZE'
+#define Sn_TXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(800): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+         *((uint16_t*)arg) = getSn_RxMAX(sn);
+                           ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2098): note: expanded from macro 'getSn_RxMAX'
+                (((uint16_t)getSn_RXBUF_SIZE(sn)) << 10)                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+HARDWARE/w5500/Ethernet/socket.c(800): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *((uint16_t*)arg) = getSn_RxMAX(sn);
+                             ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2098): note: expanded from macro 'getSn_RxMAX'
+                (((uint16_t)getSn_RXBUF_SIZE(sn)) << 10)                
+                            ^~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1912): note: expanded from macro 'getSn_RXBUF_SIZE'
+                WIZCHIP_READ(Sn_RXBUF_SIZE(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(580): note: expanded from macro 'Sn_RXBUF_SIZE'
+#define Sn_RXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001E << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(804): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_IR(sn,*(uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(807): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *((uint8_t*)arg) = getSn_IR(sn);
+                            ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1699): note: expanded from macro 'getSn_IR'
+                (WIZCHIP_READ(Sn_IR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(812): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_IMR(sn,*(uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1709): note: expanded from macro 'setSn_IMR'
+                WIZCHIP_WRITE(Sn_IMR(sn), (imr & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(669): note: expanded from macro 'Sn_IMR'
+#define Sn_IMR(N)          (_W5500_IO_BASE_ + (0x002C << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(815): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *((uint8_t*)arg) = getSn_IMR(sn);
+                            ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1719): note: expanded from macro 'getSn_IMR'
+                (WIZCHIP_READ(Sn_IMR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(669): note: expanded from macro 'Sn_IMR'
+#define Sn_IMR(N)          (_W5500_IO_BASE_ + (0x002C << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(818): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+      default:
+      ^
+HARDWARE/w5500/Ethernet/socket.c(828): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(832): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_TTL(sn,*(uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1879): note: expanded from macro 'setSn_TTL'
+                WIZCHIP_WRITE(Sn_TTL(sn), ttl)
+                ~~~~~~~~~~~~~ ^~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(561): note: expanded from macro 'Sn_TTL'
+#define Sn_TTL(N)          (_W5500_IO_BASE_ + (0x0016 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(835): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_TOS(sn,*(uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1859): note: expanded from macro 'setSn_TOS'
+                WIZCHIP_WRITE(Sn_TOS(sn), tos)
+                ~~~~~~~~~~~~~ ^~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(554): note: expanded from macro 'Sn_TOS'
+#define Sn_TOS(N)          (_W5500_IO_BASE_ + (0x0015 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(838): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_MSSR(sn,*(uint16_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1832): note: expanded from macro 'setSn_MSSR'
+                WIZCHIP_WRITE(Sn_MSSR(sn),   (uint8_t)(mss>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(544): note: expanded from macro 'Sn_MSSR'
+#define Sn_MSSR(N)         (_W5500_IO_BASE_ + (0x0012 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(838): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_MSSR(sn,*(uint16_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1833): note: expanded from macro 'setSn_MSSR'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_MSSR(sn),1), (uint8_t) mss); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(838): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         setSn_MSSR(sn,*(uint16_t*)arg);
+                                       ^
+HARDWARE/w5500/Ethernet/socket.c(841): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_DIPR(sn, (uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1785): note: expanded from macro 'setSn_DIPR'
+                WIZCHIP_WRITE_BUF(Sn_DIPR(sn), dipr, 4)
+                ~~~~~~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(527): note: expanded from macro 'Sn_DIPR'
+#define Sn_DIPR(N)         (_W5500_IO_BASE_ + (0x000C << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(844): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_DPORT(sn, *(uint16_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1805): note: expanded from macro 'setSn_DPORT'
+                WIZCHIP_WRITE(Sn_DPORT(sn),   (uint8_t) (dport>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(537): note: expanded from macro 'Sn_DPORT'
+#define Sn_DPORT(N)        (_W5500_IO_BASE_ + (0x0010 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(844): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_DPORT(sn, *(uint16_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1806): note: expanded from macro 'setSn_DPORT'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_DPORT(sn),1), (uint8_t)  dport); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(844): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         setSn_DPORT(sn, *(uint16_t*)arg);
+                                         ^
+HARDWARE/w5500/Ethernet/socket.c(848): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         CHECK_SOCKMODE(Sn_MR_TCP);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(848): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         CHECK_SOCKMODE(Sn_MR_TCP);
+                                  ^
+HARDWARE/w5500/Ethernet/socket.c(850): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+            if(getSn_KPALVTR(sn) != 0) return SOCKERR_SOCKOPT;
+               ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2079): note: expanded from macro 'getSn_KPALVTR'
+                WIZCHIP_READ(Sn_KPALVTR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(689): note: expanded from macro 'Sn_KPALVTR'
+#define Sn_KPALVTR(N)      (_W5500_IO_BASE_ + (0x002F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(852): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+            setSn_CR(sn,Sn_CR_SEND_KEEP);
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1669): note: expanded from macro 'setSn_CR'
+                WIZCHIP_WRITE(Sn_CR(sn), cr)
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(853): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+            while(getSn_CR(sn) != 0)
+                  ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1679): note: expanded from macro 'getSn_CR'
+                WIZCHIP_READ(Sn_CR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(460): note: expanded from macro 'Sn_CR'
+#define Sn_CR(N)           (_W5500_IO_BASE_ + (0x0001 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(857): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+               if (getSn_IR(sn) & Sn_IR_TIMEOUT)
+                   ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1699): note: expanded from macro 'getSn_IR'
+                (WIZCHIP_READ(Sn_IR(sn)) & 0x1F)
+                 ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(859): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                                setSn_IR(sn, Sn_IR_TIMEOUT);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1689): note: expanded from macro 'setSn_IR'
+                WIZCHIP_WRITE(Sn_IR(sn), (ir & 0x1F))
+                ~~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(478): note: expanded from macro 'Sn_IR'
+#define Sn_IR(N)           (_W5500_IO_BASE_ + (0x0002 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(866): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         CHECK_SOCKMODE(Sn_MR_TCP);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(866): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         CHECK_SOCKMODE(Sn_MR_TCP);
+                                  ^
+HARDWARE/w5500/Ethernet/socket.c(867): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         setSn_KPALVTR(sn,*(uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2069): note: expanded from macro 'setSn_KPALVTR'
+                WIZCHIP_WRITE(Sn_KPALVTR(sn), kpalvt)
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(689): note: expanded from macro 'Sn_KPALVTR'
+#define Sn_KPALVTR(N)      (_W5500_IO_BASE_ + (0x002F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(829): warning: 6 enumeration values not explicitly handled in switch: 'SO_FLAG', 'SO_SENDBUF', 'SO_RECVBUF'... [-Wswitch-enum]
+   switch(sotype)
+          ^
+HARDWARE/w5500/Ethernet/socket.c(879): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   CHECK_SOCKNUM();
+                  ^
+HARDWARE/w5500/Ethernet/socket.c(883): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint8_t*)arg = getSn_MR(sn) & 0xF0;
+                          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(886): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint8_t*) arg = getSn_TTL(sn);
+                           ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1890): note: expanded from macro 'getSn_TTL'
+                WIZCHIP_READ(Sn_TTL(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(561): note: expanded from macro 'Sn_TTL'
+#define Sn_TTL(N)          (_W5500_IO_BASE_ + (0x0016 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(889): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint8_t*) arg = getSn_TOS(sn);
+                           ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1869): note: expanded from macro 'getSn_TOS'
+                WIZCHIP_READ(Sn_TOS(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(554): note: expanded from macro 'Sn_TOS'
+#define Sn_TOS(N)          (_W5500_IO_BASE_ + (0x0015 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(892): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+         *(uint16_t*) arg = getSn_MSSR(sn);
+                          ~ ^~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1849): note: expanded from macro 'getSn_MSSR'
+                (((uint16_t)WIZCHIP_READ(Sn_MSSR(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_MSSR(sn),1)))          
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(892): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint16_t*) arg = getSn_MSSR(sn);
+                            ^~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1849): note: expanded from macro 'getSn_MSSR'
+                (((uint16_t)WIZCHIP_READ(Sn_MSSR(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_MSSR(sn),1)))          
+                            ~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(544): note: expanded from macro 'Sn_MSSR'
+#define Sn_MSSR(N)         (_W5500_IO_BASE_ + (0x0012 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(892): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint16_t*) arg = getSn_MSSR(sn);
+                            ^~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1849): note: expanded from macro 'getSn_MSSR'
+                (((uint16_t)WIZCHIP_READ(Sn_MSSR(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_MSSR(sn),1)))          
+                                                              ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(895): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         getSn_DIPR(sn, (uint8_t*)arg);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1795): note: expanded from macro 'getSn_DIPR'
+                WIZCHIP_READ_BUF(Sn_DIPR(sn), dipr, 4)
+                ~~~~~~~~~~~~~~~~ ^~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(527): note: expanded from macro 'Sn_DIPR'
+#define Sn_DIPR(N)         (_W5500_IO_BASE_ + (0x000C << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(898): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+         *(uint16_t*) arg = getSn_DPORT(sn);
+                          ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1822): note: expanded from macro 'getSn_DPORT'
+                (((uint16_t)WIZCHIP_READ(Sn_DPORT(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_DPORT(sn),1)))                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(898): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint16_t*) arg = getSn_DPORT(sn);
+                            ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1822): note: expanded from macro 'getSn_DPORT'
+                (((uint16_t)WIZCHIP_READ(Sn_DPORT(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_DPORT(sn),1)))                
+                            ~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(537): note: expanded from macro 'Sn_DPORT'
+#define Sn_DPORT(N)        (_W5500_IO_BASE_ + (0x0010 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(898): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint16_t*) arg = getSn_DPORT(sn);
+                            ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1822): note: expanded from macro 'getSn_DPORT'
+                (((uint16_t)WIZCHIP_READ(Sn_DPORT(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_DPORT(sn),1)))                
+                                                               ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(902): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         CHECK_SOCKMODE(Sn_MR_TCP);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(90): note: expanded from macro 'CHECK_SOCKMODE'
+      if((getSn_MR(sn) & 0x0F) != mode) return SOCKERR_SOCKMODE;  \
+          ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(902): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         CHECK_SOCKMODE(Sn_MR_TCP);
+                                  ^
+HARDWARE/w5500/Ethernet/socket.c(903): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint16_t*) arg = getSn_KPALVTR(sn);
+                            ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2079): note: expanded from macro 'getSn_KPALVTR'
+                WIZCHIP_READ(Sn_KPALVTR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(689): note: expanded from macro 'Sn_KPALVTR'
+#define Sn_KPALVTR(N)      (_W5500_IO_BASE_ + (0x002F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(913): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         *(uint8_t*) arg = getSn_SR(sn);
+                           ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1728): note: expanded from macro 'getSn_SR'
+                WIZCHIP_READ(Sn_SR(sn))
+                ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(501): note: expanded from macro 'Sn_SR'
+#define Sn_SR(N)           (_W5500_IO_BASE_ + (0x0003 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(916): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         if(getSn_MR(sn) & Sn_MR_TCP)
+            ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(924): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         if((getSn_MR(sn) == Sn_MR_TCP))
+             ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1659): note: expanded from macro 'getSn_MR'
+        WIZCHIP_READ(Sn_MR(sn))
+        ~~~~~~~~~~~~ ^~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(441): note: expanded from macro 'Sn_MR'
+#define Sn_MR(N)           (_W5500_IO_BASE_ + (0x0000 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/socket.c(880): warning: enumeration value 'SO_KEEPALIVESEND' not explicitly handled in switch [-Wswitch-enum]
+   switch(sotype)
+          ^
+157 warnings generated.
+compiling socket.c...
+HARDWARE/w5500/Ethernet/wizchip_conf.c(67): warning: no previous prototype for function 'wizchip_cris_enter' [-Wmissing-prototypes]
+void      wizchip_cris_enter(void)           {}
+          ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(67): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void      wizchip_cris_enter(void)           {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(75): warning: no previous prototype for function 'wizchip_cris_exit' [-Wmissing-prototypes]
+void      wizchip_cris_exit(void)          {}
+          ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(75): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void      wizchip_cris_exit(void)          {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(83): warning: no previous prototype for function 'wizchip_cs_select' [-Wmissing-prototypes]
+void    wizchip_cs_select(void)            {}
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(83): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void    wizchip_cs_select(void)            {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(91): warning: no previous prototype for function 'wizchip_cs_deselect' [-Wmissing-prototypes]
+void    wizchip_cs_deselect(void)          {}
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(91): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void    wizchip_cs_deselect(void)          {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(100): warning: no previous prototype for function 'wizchip_bus_readdata' [-Wmissing-prototypes]
+iodata_t wizchip_bus_readdata(uint32_t AddrSel) { return * ((volatile iodata_t *)((ptrdiff_t) AddrSel)); }
+         ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(100): note: declare 'static' if the function is not intended to be used outside of this translation unit
+iodata_t wizchip_bus_readdata(uint32_t AddrSel) { return * ((volatile iodata_t *)((ptrdiff_t) AddrSel)); }
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(109): warning: no previous prototype for function 'wizchip_bus_writedata' [-Wmissing-prototypes]
+void    wizchip_bus_writedata(uint32_t AddrSel, iodata_t wb)  { *((volatile iodata_t*)((ptrdiff_t)AddrSel)) = wb; }
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(109): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void    wizchip_bus_writedata(uint32_t AddrSel, iodata_t wb)  { *((volatile iodata_t*)((ptrdiff_t)AddrSel)) = wb; }
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(117): warning: no previous prototype for function 'wizchip_spi_readbyte' [-Wmissing-prototypes]
+uint8_t wizchip_spi_readbyte(void)        {return 0;}
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(117): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t wizchip_spi_readbyte(void)        {return 0;}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(125): warning: unused parameter 'wb' [-Wunused-parameter]
+void    wizchip_spi_writebyte(uint8_t wb) {}
+                                      ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(125): warning: no previous prototype for function 'wizchip_spi_writebyte' [-Wmissing-prototypes]
+void    wizchip_spi_writebyte(uint8_t wb) {}
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(125): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void    wizchip_spi_writebyte(uint8_t wb) {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(133): warning: unused parameter 'pBuf' [-Wunused-parameter]
+void    wizchip_spi_readburst(uint8_t* pBuf, uint16_t len)      {}
+                                       ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(133): warning: unused parameter 'len' [-Wunused-parameter]
+void    wizchip_spi_readburst(uint8_t* pBuf, uint16_t len)      {}
+                                                      ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(133): warning: no previous prototype for function 'wizchip_spi_readburst' [-Wmissing-prototypes]
+void    wizchip_spi_readburst(uint8_t* pBuf, uint16_t len)      {}
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(133): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void    wizchip_spi_readburst(uint8_t* pBuf, uint16_t len)      {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(141): warning: unused parameter 'pBuf' [-Wunused-parameter]
+void    wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {}
+                                        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(141): warning: unused parameter 'len' [-Wunused-parameter]
+void    wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {}
+                                                       ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(141): warning: no previous prototype for function 'wizchip_spi_writeburst' [-Wmissing-prototypes]
+void    wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {}
+        ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(141): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void    wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {}
+^
+static 
+HARDWARE/w5500/Ethernet/wizchip_conf.c(55): warning: In file included from...
+./HARDWARE/w5500/Ethernet\wizchip_conf.h(243): warning: padding struct 'struct __WIZCHIP' with 3 bytes to align 'CRIS' [-Wpadded]
+   }CRIS;  
+    ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(318): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+         setINTLEVEL(*(uint16_t*)arg);
+                                     ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(321): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+         *(uint16_t*)arg = getINTLEVEL();
+                         ~ ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1361): note: expanded from macro 'getINTLEVEL'
+                (((uint16_t)WIZCHIP_READ(INTLEVEL) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(INTLEVEL,1)))
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(349): warning: implicit conversion changes signedness: 'int8_t' (aka 'signed char') to 'uint8_t' (aka 'unsigned char') [-Wsign-conversion]
+         tmp = wizphy_getphypmode();
+             ~ ^~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(354): warning: implicit conversion changes signedness: 'int8_t' (aka 'signed char') to 'uint8_t' (aka 'unsigned char') [-Wsign-conversion]
+         tmp = wizphy_getphylink();
+             ~ ^~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(359): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+      default:
+      ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(55): warning: In file included from...
+./HARDWARE/w5500/Ethernet\wizchip_conf.h(451): warning: padding struct 'struct wiz_NetTimeout_t' with 1 byte to align 'time_100us' [-Wpadded]
+   uint16_t time_100us;    ///< time unit 100us
+            ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(388): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+      default:
+      ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(457): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        setSn_TXBUF_SIZE(i, txsize[i]);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1922): note: expanded from macro 'setSn_TXBUF_SIZE'
+                WIZCHIP_WRITE(Sn_TXBUF_SIZE(sn), txbufsize)
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(591): note: expanded from macro 'Sn_TXBUF_SIZE'
+#define Sn_TXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001F << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(493): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                        setSn_RXBUF_SIZE(i, rxsize[i]);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1901): note: expanded from macro 'setSn_RXBUF_SIZE'
+                WIZCHIP_WRITE(Sn_RXBUF_SIZE(sn),rxbufsize)
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(580): note: expanded from macro 'Sn_RXBUF_SIZE'
+#define Sn_RXBUF_SIZE(N)   (_W5500_IO_BASE_ + (0x001E << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(555): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  ret = (ret << 8) + ir;
+      ~ ~~~~~~~~~~~^~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(608): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  ret = (ret << 8) + imr;
+      ~ ~~~~~~~~~~~^~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(890): warning: cast from function call of type 'uint8_t' (aka 'unsigned char') to non-matching type 'netmode_type' [-Wbad-function-cast]
+   return (netmode_type) getMR();
+                         ^~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1262): note: expanded from macro 'getMR'
+                WIZCHIP_READ(MR)
+                ^~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/wizchip_conf.c(896): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   setRTR(nettime->time_100us);
+                              ^
+HARDWARE/w5500/Ethernet/wizchip_conf.c(902): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   nettime->time_100us = getRTR();
+                       ~ ^~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1456): note: expanded from macro 'getRTR'
+                (((uint16_t)WIZCHIP_READ(_RTR_) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(_RTR_,1)))
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 warnings generated.
+compiling wizchip_conf.c...
+HARDWARE/Hal/hal.c(14): warning: In file included from...
+HARDWARE/Hal/hal.h(21): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(45): warning: In file included from...
+./LIB/libraries/util\nrf_assert.h(50): warning: In file included from...
+./LIB/libraries/util/app_error.h(128): warning: unused parameter 'pc' [-Wunused-parameter]
+static __INLINE void app_error_log(uint32_t id, uint32_t pc, uint32_t info)
+                                                         ^
+HARDWARE/Hal/hal.c(14): warning: In file included from...
+HARDWARE/Hal/hal.h(21): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(129): warning: '__LINT__' is not defined, evaluates to 0 [-Wundef]
+#if (__LINT__ != 1)
+     ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(463): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(*p_pin < NUMBER_OF_PINS);
+                                   ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(597): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    reg->PIN_CNF[pin_number] |= (sense_config << GPIO_PIN_CNF_SENSE_Pos);
+                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_gpio.h(743): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(start_port + length <= GPIO_COUNT);
+                                             ^
+HARDWARE/Hal/hal.c(14): warning: In file included from...
+HARDWARE/Hal/hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(54): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_spi.h(261): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    *((volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event)) = 0x0UL;
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(271): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (bool)*(volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(277): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(325): warning: implicit conversion loses integer precision: 'const volatile uint32_t' (aka 'const volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    return p_reg->RXD;
+    ~~~~~~ ~~~~~~~^~~
+./LIB/drivers_nrf/hal\nrf_spi.h(331): warning: implicit conversion changes signedness: 'nrf_spi_frequency_t' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    p_reg->FREQUENCY = frequency;
+                     ~ ^~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(342): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+HARDWARE/Hal/hal.c(14): warning: In file included from...
+HARDWARE/Hal/hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(211): warning: padding struct 'nrf_drv_spi_xfer_desc_t' with 3 bytes to align 'p_rx_buffer' [-Wpadded]
+    uint8_t       * p_rx_buffer; ///< Pointer to RX buffer.
+                    ^
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(207): warning: padding size of 'nrf_drv_spi_xfer_desc_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+HARDWARE/Hal/hal.c(90): warning: explicitly assigning value of variable of type 'uint16' (aka 'unsigned short') to itself [-Wself-assign]
+                u16Delay = u16Delay; 
+                ~~~~~~~~ ^ ~~~~~~~~
+HARDWARE/Hal/hal.c(153): warning: format string is not a string literal [-Wformat-nonliteral]
+    vsnprintf(buff, sizeof(buff), fmt, args);
+                                  ^~~
+HARDWARE/Hal/hal.c(155): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                IR_SendData((uint8_t*)buff, strlen(buff));
+                ~~~~~~~~~~~                 ^~~~~~~~~~~~
+HARDWARE/Hal/hal.c(504): warning: no previous prototype for function 'nrf_timer_delay_ms' [-Wmissing-prototypes]
+void nrf_timer_delay_ms(uint_fast16_t volatile number_of_ms)
+     ^
+HARDWARE/Hal/hal.c(504): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void nrf_timer_delay_ms(uint_fast16_t volatile number_of_ms)
+^
+static 
+HARDWARE/Hal/hal.c(551): warning: explicitly assigning value of variable of type 'uint16' (aka 'unsigned short') to itself [-Wself-assign]
+        u16Delay = u16Delay;
+        ~~~~~~~~ ^ ~~~~~~~~
+HARDWARE/Hal/hal.c(546): warning: no previous prototype for function 'delay_us' [-Wmissing-prototypes]
+void delay_us(uint16 u16Delay)
+     ^
+HARDWARE/Hal/hal.c(546): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_us(uint16 u16Delay)
+^
+static 
+HARDWARE/Hal/hal.c(14): warning: In file included from...
+HARDWARE/Hal/hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(91): warning: padding size of 'nrf_drv_spi_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(177): warning: padding struct 'nrf_drv_spi_config_t' with 2 bytes to align 'frequency' [-Wpadded]
+    nrf_drv_spi_frequency_t frequency; ///< SPI frequency.
+                            ^
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(158): warning: padding size of 'nrf_drv_spi_config_t' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(262): warning: padding struct 'nrf_drv_spi_evt_t' with 3 bytes to align 'data' [-Wpadded]
+    } data;
+      ^
+23 warnings generated.
+compiling hal.c...
+RTE/Device/nRF51802_xxAA/system_nrf51.c(60): warning: 'nrf51_errata_26' was marked unused but was used [-Wused-but-marked-unused]
+    if (nrf51_errata_26())
+        ^
+RTE/Device/nRF51802_xxAA/system_nrf51.c(69): warning: 'nrf51_errata_59' was marked unused but was used [-Wused-but-marked-unused]
+    if (nrf51_errata_59())
+        ^
+RTE/Device/nRF51802_xxAA/system_nrf51.c(77): warning: 'nrf51_errata_76' was marked unused but was used [-Wused-but-marked-unused]
+    if (nrf51_errata_76()){
+        ^
+3 warnings generated.
+compiling system_nrf51.c...
+HARDWARE/w5500/Ethernet/W5500/w5500.c(55): warning: In file included from...
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(56): warning: In file included from...
+./HARDWARE/w5500/Ethernet\wizchip_conf.h(243): warning: padding struct 'struct __WIZCHIP' with 3 bytes to align 'CRIS' [-Wpadded]
+   }CRIS;  
+    ^
+HARDWARE/w5500/Ethernet/W5500/w5500.c(194): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      val1 = WIZCHIP_READ(Sn_TX_FSR(sn));
+             ~~~~~~~~~~~~ ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(602): note: expanded from macro 'Sn_TX_FSR'
+#define Sn_TX_FSR(N)       (_W5500_IO_BASE_ + (0x0020 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(195): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+      val1 = (val1 << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_FSR(sn),1));
+           ~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(195): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      val1 = (val1 << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_FSR(sn),1));
+                           ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(198): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        val = WIZCHIP_READ(Sn_TX_FSR(sn));
+              ~~~~~~~~~~~~ ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(602): note: expanded from macro 'Sn_TX_FSR'
+#define Sn_TX_FSR(N)       (_W5500_IO_BASE_ + (0x0020 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(199): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        val = (val << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_FSR(sn),1));
+            ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(199): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        val = (val << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_FSR(sn),1));
+                           ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(212): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      val1 = WIZCHIP_READ(Sn_RX_RSR(sn));
+             ~~~~~~~~~~~~ ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(637): note: expanded from macro 'Sn_RX_RSR'
+#define Sn_RX_RSR(N)       (_W5500_IO_BASE_ + (0x0026 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(213): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+      val1 = (val1 << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RSR(sn),1));
+           ~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(213): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      val1 = (val1 << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RSR(sn),1));
+                           ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(216): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        val = WIZCHIP_READ(Sn_RX_RSR(sn));
+              ~~~~~~~~~~~~ ^~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(637): note: expanded from macro 'Sn_RX_RSR'
+#define Sn_RX_RSR(N)       (_W5500_IO_BASE_ + (0x0026 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(217): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        val = (val << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RSR(sn),1));
+            ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(217): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        val = (val << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RSR(sn),1));
+                           ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(229): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   ptr = getSn_TX_WR(sn);
+       ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1981): note: expanded from macro 'getSn_TX_WR'
+                (((uint16_t)WIZCHIP_READ(Sn_TX_WR(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_WR(sn),1)))                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(229): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   ptr = getSn_TX_WR(sn);
+         ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1981): note: expanded from macro 'getSn_TX_WR'
+                (((uint16_t)WIZCHIP_READ(Sn_TX_WR(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_WR(sn),1)))                
+                            ~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(628): note: expanded from macro 'Sn_TX_WR'
+#define Sn_TX_WR(N)        (_W5500_IO_BASE_ + (0x0024 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(229): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   ptr = getSn_TX_WR(sn);
+         ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1981): note: expanded from macro 'getSn_TX_WR'
+                (((uint16_t)WIZCHIP_READ(Sn_TX_WR(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_TX_WR(sn),1)))                
+                                                               ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(232): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   addrsel = ((uint32_t)ptr << 8) + (WIZCHIP_TXBUF_BLOCK(sn) << 3);
+                                  ~  ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(237): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_TX_WR(sn,ptr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1964): note: expanded from macro 'setSn_TX_WR'
+                WIZCHIP_WRITE(Sn_TX_WR(sn),   (uint8_t)(txwr>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(628): note: expanded from macro 'Sn_TX_WR'
+#define Sn_TX_WR(N)        (_W5500_IO_BASE_ + (0x0024 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(237): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_TX_WR(sn,ptr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(1965): note: expanded from macro 'setSn_TX_WR'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_TX_WR(sn),1), (uint8_t) txwr); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(237): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   setSn_TX_WR(sn,ptr);
+                      ^
+HARDWARE/w5500/Ethernet/W5500/w5500.c(246): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   ptr = getSn_RX_RD(sn);
+       ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2018): note: expanded from macro 'getSn_RX_RD'
+                (((uint16_t)WIZCHIP_READ(Sn_RX_RD(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1)))                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(246): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   ptr = getSn_RX_RD(sn);
+         ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2018): note: expanded from macro 'getSn_RX_RD'
+                (((uint16_t)WIZCHIP_READ(Sn_RX_RD(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1)))                
+                            ~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(650): note: expanded from macro 'Sn_RX_RD'
+#define Sn_RX_RD(N)        (_W5500_IO_BASE_ + (0x0028 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(246): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   ptr = getSn_RX_RD(sn);
+         ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2018): note: expanded from macro 'getSn_RX_RD'
+                (((uint16_t)WIZCHIP_READ(Sn_RX_RD(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1)))                
+                                                               ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(249): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   addrsel = ((uint32_t)ptr << 8) + (WIZCHIP_RXBUF_BLOCK(sn) << 3);
+                                  ~  ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(254): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_RX_RD(sn,ptr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2001): note: expanded from macro 'setSn_RX_RD'
+                WIZCHIP_WRITE(Sn_RX_RD(sn),   (uint8_t)(rxrd>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(650): note: expanded from macro 'Sn_RX_RD'
+#define Sn_RX_RD(N)        (_W5500_IO_BASE_ + (0x0028 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(254): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_RX_RD(sn,ptr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2002): note: expanded from macro 'setSn_RX_RD'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1), (uint8_t) rxrd); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(254): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   setSn_RX_RD(sn,ptr);
+                      ^
+HARDWARE/w5500/Ethernet/W5500/w5500.c(262): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   ptr = getSn_RX_RD(sn);
+       ~ ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2018): note: expanded from macro 'getSn_RX_RD'
+                (((uint16_t)WIZCHIP_READ(Sn_RX_RD(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1)))                
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(262): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   ptr = getSn_RX_RD(sn);
+         ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2018): note: expanded from macro 'getSn_RX_RD'
+                (((uint16_t)WIZCHIP_READ(Sn_RX_RD(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1)))                
+                            ~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(650): note: expanded from macro 'Sn_RX_RD'
+#define Sn_RX_RD(N)        (_W5500_IO_BASE_ + (0x0028 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(262): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   ptr = getSn_RX_RD(sn);
+         ^~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2018): note: expanded from macro 'getSn_RX_RD'
+                (((uint16_t)WIZCHIP_READ(Sn_RX_RD(sn)) << 8) + WIZCHIP_READ(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1)))                
+                                                               ~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(264): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_RX_RD(sn,ptr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2001): note: expanded from macro 'setSn_RX_RD'
+                WIZCHIP_WRITE(Sn_RX_RD(sn),   (uint8_t)(rxrd>>8)); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(650): note: expanded from macro 'Sn_RX_RD'
+#define Sn_RX_RD(N)        (_W5500_IO_BASE_ + (0x0028 << 8) + (WIZCHIP_SREG_BLOCK(N) << 3))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(264): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   setSn_RX_RD(sn,ptr);
+   ^~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(2002): note: expanded from macro 'setSn_RX_RD'
+                WIZCHIP_WRITE(WIZCHIP_OFFSET_INC(Sn_RX_RD(sn),1), (uint8_t) rxrd); \
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HARDWARE/w5500/Ethernet/W5500/w5500.h(72): note: expanded from macro 'WIZCHIP_OFFSET_INC'
+#define WIZCHIP_OFFSET_INC(ADDR, N)    (ADDR + (N<<8)) //< Increase offset address
+                                        ~~~~~^~~~~~~~
+HARDWARE/w5500/Ethernet/W5500/w5500.c(264): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   setSn_RX_RD(sn,ptr);
+                      ^
+33 warnings generated.
+compiling w5500.c...
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(48): warning: In file included from...
+./LIB/libraries/util\sdk_common.h(62): warning: In file included from...
+./LIB/libraries/util/app_util.h(826): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0])) |
+                                         ^
+./LIB/libraries/util/app_util.h(827): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+                 (((uint16_t)((uint8_t *)p_encoded_data)[1]) << 8 ));
+                                         ^
+./LIB/libraries/util/app_util.h(826): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0])) |
+        ~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+./LIB/libraries/util/app_util.h(838): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0]) << 8 ) |
+                                         ^
+./LIB/libraries/util/app_util.h(839): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+                 (((uint16_t)((uint8_t *)p_encoded_data)[1])) );
+                                         ^
+./LIB/libraries/util/app_util.h(838): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0]) << 8 ) |
+        ~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+./LIB/libraries/util/app_util.h(850): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint32_t)((uint8_t *)p_encoded_data)[0]) << 0)  |
+                                     ^
+./LIB/libraries/util/app_util.h(851): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[1]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(852): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[2]) << 16));
+                                     ^
+./LIB/libraries/util/app_util.h(863): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint32_t)((uint8_t *)p_encoded_data)[0]) << 0)  |
+                                     ^
+./LIB/libraries/util/app_util.h(864): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[1]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(865): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[2]) << 16) |
+                                     ^
+./LIB/libraries/util/app_util.h(866): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[3]) << 24 ));
+                                     ^
+./LIB/libraries/util/app_util.h(877): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint32_t)((uint8_t *)p_encoded_data)[0]) << 24) |
+                                     ^
+./LIB/libraries/util/app_util.h(878): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[1]) << 16) |
+                                     ^
+./LIB/libraries/util/app_util.h(879): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[2]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(880): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[3]) << 0) );
+                                     ^
+./LIB/libraries/util/app_util.h(908): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    *(uint32_t *)p_encoded_data = __REV(value);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/libraries/util/app_util.h(920): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint64_t)((uint8_t *)p_encoded_data)[0]) << 0)  |
+                                     ^
+./LIB/libraries/util/app_util.h(921): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[1]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(922): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[2]) << 16) |
+                                     ^
+./LIB/libraries/util/app_util.h(923): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[3]) << 24) |
+                                     ^
+./LIB/libraries/util/app_util.h(924): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[4]) << 32) |
+                                     ^
+./LIB/libraries/util/app_util.h(925): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[5]) << 40 ));
+                                     ^
+./LIB/libraries/util/app_util.h(958): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        battery_level = 100 - ((3000 - mvolts) * 58) / 100;
+                      ~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/libraries/util/app_util.h(962): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        battery_level = 42 - ((2900 - mvolts) * 24) / 160;
+                      ~ ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(49): warning: In file included from...
+./LIB/libraries/util\nrf_assert.h(50): warning: In file included from...
+./LIB/libraries/util/app_error.h(128): warning: unused parameter 'pc' [-Wunused-parameter]
+static __INLINE void app_error_log(uint32_t id, uint32_t pc, uint32_t info)
+                                                         ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(124): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(PERIPHERAL_RESOURCE_SHARING)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(174): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(187): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(259): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(259): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+                                 ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(322): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(322): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+                                 ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(329): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_DRV_COMMON_POWER_CLOCK_ISR
+    ^
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                        ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(329): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                                                     ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(42): warning: In file included from...
+./LIB/drivers_nrf/common/nrf_drv_common.h(334): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#elif NRF_MODULE_ENABLED(CLOCK)
+      ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(47): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_DRV_COMMON_POWER_CLOCK_ISR
+    ^
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                        ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(47): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                                                     ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(55): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(PERIPHERAL_RESOURCE_SHARING)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(254): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(266): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(269): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_DRV_COMMON_POWER_CLOCK_ISR
+    ^
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                        ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(269): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                                                     ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(278): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_DRV_COMMON_POWER_CLOCK_ISR
+    ^
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                        ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(278): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+./LIB/drivers_nrf/common/nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                                                     ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/common/nrf_drv_common.c(292): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    INTERRUPT_PRIORITY_ASSERT(priority);
+                                       ^
+47 warnings generated.
+compiling nrf_drv_common.c...
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(41): warning: In file included from...
+./LIB/libraries/util\sdk_common.h(62): warning: In file included from...
+./LIB/libraries/util/app_util.h(826): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0])) |
+                                         ^
+./LIB/libraries/util/app_util.h(827): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+                 (((uint16_t)((uint8_t *)p_encoded_data)[1]) << 8 ));
+                                         ^
+./LIB/libraries/util/app_util.h(826): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0])) |
+        ~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+./LIB/libraries/util/app_util.h(838): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0]) << 8 ) |
+                                         ^
+./LIB/libraries/util/app_util.h(839): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+                 (((uint16_t)((uint8_t *)p_encoded_data)[1])) );
+                                         ^
+./LIB/libraries/util/app_util.h(838): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        return ( (((uint16_t)((uint8_t *)p_encoded_data)[0]) << 8 ) |
+        ~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+./LIB/libraries/util/app_util.h(850): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint32_t)((uint8_t *)p_encoded_data)[0]) << 0)  |
+                                     ^
+./LIB/libraries/util/app_util.h(851): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[1]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(852): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[2]) << 16));
+                                     ^
+./LIB/libraries/util/app_util.h(863): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint32_t)((uint8_t *)p_encoded_data)[0]) << 0)  |
+                                     ^
+./LIB/libraries/util/app_util.h(864): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[1]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(865): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[2]) << 16) |
+                                     ^
+./LIB/libraries/util/app_util.h(866): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[3]) << 24 ));
+                                     ^
+./LIB/libraries/util/app_util.h(877): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint32_t)((uint8_t *)p_encoded_data)[0]) << 24) |
+                                     ^
+./LIB/libraries/util/app_util.h(878): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[1]) << 16) |
+                                     ^
+./LIB/libraries/util/app_util.h(879): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[2]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(880): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint32_t)((uint8_t *)p_encoded_data)[3]) << 0) );
+                                     ^
+./LIB/libraries/util/app_util.h(908): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    *(uint32_t *)p_encoded_data = __REV(value);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/libraries/util/app_util.h(920): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    return ( (((uint64_t)((uint8_t *)p_encoded_data)[0]) << 0)  |
+                                     ^
+./LIB/libraries/util/app_util.h(921): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[1]) << 8)  |
+                                     ^
+./LIB/libraries/util/app_util.h(922): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[2]) << 16) |
+                                     ^
+./LIB/libraries/util/app_util.h(923): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[3]) << 24) |
+                                     ^
+./LIB/libraries/util/app_util.h(924): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[4]) << 32) |
+                                     ^
+./LIB/libraries/util/app_util.h(925): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+             (((uint64_t)((uint8_t *)p_encoded_data)[5]) << 40 ));
+                                     ^
+./LIB/libraries/util/app_util.h(958): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        battery_level = 100 - ((3000 - mvolts) * 58) / 100;
+                      ~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/libraries/util/app_util.h(962): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        battery_level = 42 - ((2900 - mvolts) * 24) / 160;
+                      ~ ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(42): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(SPI)
+    ^
+./LIB/libraries/util/nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(46): warning: In file included from...
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(54): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_spi.h(261): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    *((volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event)) = 0x0UL;
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(271): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (bool)*(volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(277): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(325): warning: implicit conversion loses integer precision: 'const volatile uint32_t' (aka 'const volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    return p_reg->RXD;
+    ~~~~~~ ~~~~~~~^~~
+./LIB/drivers_nrf/hal\nrf_spi.h(331): warning: implicit conversion changes signedness: 'nrf_spi_frequency_t' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    p_reg->FREQUENCY = frequency;
+                     ~ ^~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(342): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(46): warning: In file included from...
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(211): warning: padding struct 'nrf_drv_spi_xfer_desc_t' with 3 bytes to align 'p_rx_buffer' [-Wpadded]
+    uint8_t       * p_rx_buffer; ///< Pointer to RX buffer.
+                    ^
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(207): warning: padding size of 'nrf_drv_spi_xfer_desc_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(49): warning: In file included from...
+./LIB/libraries/util\nrf_assert.h(50): warning: In file included from...
+./LIB/libraries/util/app_error.h(128): warning: unused parameter 'pc' [-Wunused-parameter]
+static __INLINE void app_error_log(uint32_t id, uint32_t pc, uint32_t info)
+                                                         ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(124): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(PERIPHERAL_RESOURCE_SHARING)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(174): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(187): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(259): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(259): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+                                 ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(322): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(322): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(CLOCK) || NRF_MODULE_ENABLED(POWER)
+                                 ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(329): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_DRV_COMMON_POWER_CLOCK_ISR
+    ^
+./LIB/drivers_nrf/common\nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                        ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(329): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+./LIB/drivers_nrf/common\nrf_drv_common.h(97): note: expanded from macro 'NRF_DRV_COMMON_POWER_CLOCK_ISR'
+#define NRF_DRV_COMMON_POWER_CLOCK_ISR (NRF_MODULE_ENABLED(CLOCK) && NRF_MODULE_ENABLED(POWER))
+                                                                     ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(47): warning: In file included from...
+./LIB/drivers_nrf/common\nrf_drv_common.h(334): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#elif NRF_MODULE_ENABLED(CLOCK)
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(48): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(129): warning: '__LINT__' is not defined, evaluates to 0 [-Wundef]
+#if (__LINT__ != 1)
+     ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(463): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(*p_pin < NUMBER_OF_PINS);
+                                   ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(597): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    reg->PIN_CNF[pin_number] |= (sense_config << GPIO_PIN_CNF_SENSE_Pos);
+                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_gpio.h(743): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(start_port + length <= GPIO_COUNT);
+                                             ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(61): warning: In file included from...
+./LIB/libraries/log\nrf_log.h(87): warning: In file included from...
+./LIB/libraries/log/src\nrf_log_internal.h(194): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(NRF_LOG)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(88): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ((NRF_MODULE_ENABLED(SPI0) && SPI0_USE_EASY_DMA) || \
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(89): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+     (NRF_MODULE_ENABLED(SPI1) && SPI1_USE_EASY_DMA) || \
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(90): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+     (NRF_MODULE_ENABLED(SPI2) && SPI2_USE_EASY_DMA))
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(93): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ((NRF_MODULE_ENABLED(SPI0) && !SPI0_USE_EASY_DMA) || \
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(94): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+     (NRF_MODULE_ENABLED(SPI1) && !SPI1_USE_EASY_DMA) || \
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(95): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+     (NRF_MODULE_ENABLED(SPI2) && !SPI2_USE_EASY_DMA))
+      ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(46): warning: In file included from...
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(262): warning: padding struct 'nrf_drv_spi_evt_t' with 3 bytes to align 'data' [-Wpadded]
+    } data;
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(119): warning: padding size of 'spi_control_block_t' with 22 bits to alignment boundary [-Wpadded]
+typedef struct
+        ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(137): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(PERIPHERAL_RESOURCE_SHARING)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(170): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(p_config);
+                    ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(177): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        NRF_LOG_WARNING("Function: %s, error code: %s.\r\n", (uint32_t)__func__, (uint32_t)ERR_TO_STR(err_code));
+                                                                                                                ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(181): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(PERIPHERAL_RESOURCE_SHARING)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(290): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_INFO("Init\r\n");
+                            ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(293): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_INFO("Function: %s, error code: %s.\r\n", (uint32_t)__func__, (uint32_t)ERR_TO_STR(err_code));
+                                                                                                         ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(46): warning: In file included from...
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(91): warning: padding size of 'nrf_drv_spi_t' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(177): warning: padding struct 'nrf_drv_spi_config_t' with 2 bytes to align 'frequency' [-Wpadded]
+    nrf_drv_spi_frequency_t frequency; ///< SPI frequency.
+                            ^
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(158): warning: padding size of 'nrf_drv_spi_config_t' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(300): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(p_cb->state != NRF_DRV_STATE_UNINITIALIZED);
+                                                      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(336): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(PERIPHERAL_RESOURCE_SHARING)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(355): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_INFO("Transfer tx_len:%d, rx_len:%d.\r\n", tx_buffer_length, rx_buffer_length);
+                                                                                          ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(356): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_DEBUG("Tx data:\r\n");
+                                 ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(357): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+    NRF_LOG_HEXDUMP_DEBUG((uint8_t *)p_tx_buffer, tx_buffer_length * sizeof(p_tx_buffer));
+                                     ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(357): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_HEXDUMP_DEBUG((uint8_t *)p_tx_buffer, tx_buffer_length * sizeof(p_tx_buffer));
+                                                                                         ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(373): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_INFO("Transfer rx_len:%d.\r\n", p_cb->evt.data.done.rx_length);
+                                                                          ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(374): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_DEBUG("Rx data:\r\n");
+                                 ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(376): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                            p_cb->evt.data.done.rx_length * sizeof(p_cb->evt.data.done.p_rx_buffer));
+                                                                                                    ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(463): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            NRF_LOG_DEBUG("SPI: Event: NRF_SPI_EVENT_READY.\r\n"); 
+                                                                 ^~
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(559): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(p_cb->state != NRF_DRV_STATE_UNINITIALIZED);
+                                                      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(560): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(p_xfer_desc->p_tx_buffer != NULL || p_xfer_desc->tx_length == 0);
+                                                                           ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(561): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(p_xfer_desc->p_rx_buffer != NULL || p_xfer_desc->rx_length == 0);
+                                                                           ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(568): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        NRF_LOG_WARNING("Function: %s, error code: %s.\r\n", (uint32_t)__func__, (uint32_t)ERR_TO_STR(err_code));
+                                                                                                                ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(635): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(p_cb->handler);
+                         ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(638): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    NRF_LOG_DEBUG("SPI: Event: NRF_SPI_EVENT_READY.\r\n"); 
+                                                         ^~
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(647): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(SPI0)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(659): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(SPI1)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(671): warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if NRF_MODULE_ENABLED(SPI2)
+    ^
+./LIB/libraries/util\nordic_common.h(78): note: expanded from macro 'NRF_MODULE_ENABLED'
+    ((defined(module ## _ENABLED) && (module ## _ENABLED)) ? 1 : 0)
+      ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(648): warning: no previous prototype for function 'SPI0_TWI0_IRQHandler' [-Wmissing-prototypes]
+IRQ_HANDLER(0)
+^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(162): note: expanded from macro 'IRQ_HANDLER'
+    #define IRQ_HANDLER(n) void SPI##n##_IRQ_HANDLER(void)
+                                ^
+<scratch space>(74): note: expanded from here
+SPI0_IRQ_HANDLER
+^
+./LIB/drivers_nrf/spi_master/nrf_drv_spi.h(75): note: expanded from macro 'SPI0_IRQ_HANDLER'
+#define SPI0_IRQ_HANDLER    SPI0_TWI0_IRQHandler
+                            ^
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(648): note: declare 'static' if the function is not intended to be used outside of this translation unit
+IRQ_HANDLER(0)
+^
+static 
+LIB/drivers_nrf/spi_master/nrf_drv_spi.c(162): note: expanded from macro 'IRQ_HANDLER'
+    #define IRQ_HANDLER(n) void SPI##n##_IRQ_HANDLER(void)
+                           ^
+88 warnings generated.
+compiling nrf_drv_spi.c...
+USER/nrf_it.c(14): warning: In file included from...
+../NRF51802_w5500\hal.h(21): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(45): warning: In file included from...
+./LIB/libraries/util\nrf_assert.h(50): warning: In file included from...
+./LIB/libraries/util/app_error.h(128): warning: unused parameter 'pc' [-Wunused-parameter]
+static __INLINE void app_error_log(uint32_t id, uint32_t pc, uint32_t info)
+                                                         ^
+USER/nrf_it.c(14): warning: In file included from...
+../NRF51802_w5500\hal.h(21): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(129): warning: '__LINT__' is not defined, evaluates to 0 [-Wundef]
+#if (__LINT__ != 1)
+     ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(463): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(*p_pin < NUMBER_OF_PINS);
+                                   ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(597): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    reg->PIN_CNF[pin_number] |= (sense_config << GPIO_PIN_CNF_SENSE_Pos);
+                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_gpio.h(743): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(start_port + length <= GPIO_COUNT);
+                                             ^
+USER/nrf_it.c(14): warning: In file included from...
+../NRF51802_w5500\hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(54): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_spi.h(261): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    *((volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event)) = 0x0UL;
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(271): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (bool)*(volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(277): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(325): warning: implicit conversion loses integer precision: 'const volatile uint32_t' (aka 'const volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    return p_reg->RXD;
+    ~~~~~~ ~~~~~~~^~~
+./LIB/drivers_nrf/hal\nrf_spi.h(331): warning: implicit conversion changes signedness: 'nrf_spi_frequency_t' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    p_reg->FREQUENCY = frequency;
+                     ~ ^~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(342): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+USER/nrf_it.c(14): warning: In file included from...
+../NRF51802_w5500\hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(211): warning: padding struct 'nrf_drv_spi_xfer_desc_t' with 3 bytes to align 'p_rx_buffer' [-Wpadded]
+    uint8_t       * p_rx_buffer; ///< Pointer to RX buffer.
+                    ^
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(207): warning: padding size of 'nrf_drv_spi_xfer_desc_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+USER/nrf_it.c(74): warning: no previous prototype for function 'GPIOTE_IRQHandler' [-Wmissing-prototypes]
+void GPIOTE_IRQHandler(void)
+     ^
+USER/nrf_it.c(74): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIOTE_IRQHandler(void)
+^
+static 
+USER/nrf_it.c(81): warning: no previous prototype for function 'TIMER0_IRQHandler' [-Wmissing-prototypes]
+void TIMER0_IRQHandler(void)  //<B6><A8>时<C6><F7><D6>卸<CF>模式<B7><FE><CE><F1><BA><AF><CA><FD> 1s
+     ^
+USER/nrf_it.c(81): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER0_IRQHandler(void)  //<B6><A8>时<C6><F7><D6>卸<CF>模式<B7><FE><CE><F1><BA><AF><CA><FD> 1s
+^
+static 
+USER/nrf_it.c(100): warning: no previous prototype for function 'TIMER1_IRQHandler' [-Wmissing-prototypes]
+void TIMER1_IRQHandler(void)  //<B6><A8>时<C6><F7><D6>卸<CF>模式<B7><FE><CE><F1><BA><AF><CA><FD> 1s
+     ^
+USER/nrf_it.c(100): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER1_IRQHandler(void)  //<B6><A8>时<C6><F7><D6>卸<CF>模式<B7><FE><CE><F1><BA><AF><CA><FD> 1s
+^
+static 
+USER/nrf_it.c(108): warning: no previous prototype for function 'TIMER2_IRQHandler' [-Wmissing-prototypes]
+void TIMER2_IRQHandler(void)  //<B6><A8>时<C6><F7><D6>卸<CF>模式<B7><FE><CE><F1><BA><AF><CA><FD> 1ms
+     ^
+USER/nrf_it.c(108): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER2_IRQHandler(void)  //<B6><A8>时<C6><F7><D6>卸<CF>模式<B7><FE><CE><F1><BA><AF><CA><FD> 1ms
+^
+static 
+USER/nrf_it.c(107): warning: no previous extern declaration for non-static variable 'closed_time' [-Wmissing-variable-declarations]
+uint16_t closed_time;
+         ^
+USER/nrf_it.c(107): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t closed_time;
+^
+18 warnings generated.
+compiling nrf_it.c...
+assembling arm_startup_nrf51.s...
+USER/main.c(3): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(45): warning: In file included from...
+./LIB/libraries/util\nrf_assert.h(50): warning: In file included from...
+./LIB/libraries/util/app_error.h(128): warning: unused parameter 'pc' [-Wunused-parameter]
+static __INLINE void app_error_log(uint32_t id, uint32_t pc, uint32_t info)
+                                                         ^
+USER/main.c(3): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_gpio.h(129): warning: '__LINT__' is not defined, evaluates to 0 [-Wundef]
+#if (__LINT__ != 1)
+     ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(463): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(*p_pin < NUMBER_OF_PINS);
+                                   ^
+./LIB/drivers_nrf/hal\nrf_gpio.h(597): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    reg->PIN_CNF[pin_number] |= (sense_config << GPIO_PIN_CNF_SENSE_Pos);
+                             ~~  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_gpio.h(743): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ASSERT(start_port + length <= GPIO_COUNT);
+                                             ^
+USER/main.c(7): warning: In file included from...
+../NRF51802_w5500\hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(54): warning: In file included from...
+./LIB/drivers_nrf/hal\nrf_spi.h(261): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    *((volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event)) = 0x0UL;
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(271): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'volatile uint32_t *' (aka 'volatile unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (bool)*(volatile uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(277): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+    return (uint32_t *)((uint8_t *)p_reg + (uint32_t)spi_event);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(325): warning: implicit conversion loses integer precision: 'const volatile uint32_t' (aka 'const volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    return p_reg->RXD;
+    ~~~~~~ ~~~~~~~^~~
+./LIB/drivers_nrf/hal\nrf_spi.h(331): warning: implicit conversion changes signedness: 'nrf_spi_frequency_t' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    p_reg->FREQUENCY = frequency;
+                     ~ ^~~~~~~~~
+./LIB/drivers_nrf/hal\nrf_spi.h(342): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+USER/main.c(7): warning: In file included from...
+../NRF51802_w5500\hal.h(29): warning: In file included from...
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(211): warning: padding struct 'nrf_drv_spi_xfer_desc_t' with 3 bytes to align 'p_rx_buffer' [-Wpadded]
+    uint8_t       * p_rx_buffer; ///< Pointer to RX buffer.
+                    ^
+./LIB/drivers_nrf/spi_master\nrf_drv_spi.h(207): warning: padding size of 'nrf_drv_spi_xfer_desc_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+USER/main.c(12): warning: no previous extern declaration for non-static variable 'memsize' [-Wmissing-variable-declarations]
+uint8_t memsize[2][8] = {{2,2,2,2,2,2,2,2},{2,2,2,2,2,2,2,2}}; /* WIZCHIP SOCKET Buffer initialize */
+        ^
+USER/main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t memsize[2][8] = {{2,2,2,2,2,2,2,2},{2,2,2,2,2,2,2,2}}; /* WIZCHIP SOCKET Buffer initialize */
+^
+USER/main.c(13): warning: no previous extern declaration for non-static variable 'gWIZNETINFO' [-Wmissing-variable-declarations]
+wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x08, 0xdc,0x00, 0xab, 0xcd},//MAC??
+            ^
+USER/main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x08, 0xdc,0x00, 0xab, 0xcd},//MAC??
+^
+USER/main.c(39): warning: no previous prototype for function 'SPI_CrisEnter' [-Wmissing-prototypes]
+void SPI_CrisEnter(void)
+     ^
+USER/main.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_CrisEnter(void)
+^
+static 
+USER/main.c(48): warning: no previous prototype for function 'SPI_CrisExit' [-Wmissing-prototypes]
+void SPI_CrisExit(void)
+     ^
+USER/main.c(48): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_CrisExit(void)
+^
+static 
+USER/main.c(58): warning: no previous prototype for function 'SPI_CS_Select' [-Wmissing-prototypes]
+void SPI_CS_Select(void)
+     ^
+USER/main.c(58): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_CS_Select(void)
+^
+static 
+USER/main.c(68): warning: no previous prototype for function 'SPI_CS_Deselect' [-Wmissing-prototypes]
+void SPI_CS_Deselect(void)
+     ^
+USER/main.c(68): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_CS_Deselect(void)
+^
+static 
+USER/main.c(76): warning: function 'my_ip_conflict' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+USER/main.c(88): warning: no previous prototype for function 'W5500_Reset' [-Wmissing-prototypes]
+void W5500_Reset(void)
+     ^
+USER/main.c(88): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void W5500_Reset(void)
+^
+static 
+USER/main.c(102): warning: implicit declaration of function 'getIPfromDHCP' is invalid in C99 [-Wimplicit-function-declaration]
+   getIPfromDHCP(gWIZNETINFO.ip);  //IP??
+   ^
+USER/main.c(103): warning: implicit declaration of function 'getGWfromDHCP' is invalid in C99 [-Wimplicit-function-declaration]
+   getGWfromDHCP(gWIZNETINFO.gw);  //????
+   ^
+USER/main.c(104): warning: implicit declaration of function 'getSNfromDHCP' is invalid in C99 [-Wimplicit-function-declaration]
+   getSNfromDHCP(gWIZNETINFO.sn);  //????
+   ^
+USER/main.c(105): warning: implicit declaration of function 'getDNSfromDHCP' is invalid in C99 [-Wimplicit-function-declaration]
+   getDNSfromDHCP(gWIZNETINFO.dns);//DNS???
+   ^
+USER/main.c(110): warning: implicit declaration of function 'getDHCPLeasetime' is invalid in C99 [-Wimplicit-function-declaration]
+   UART_Printf("DHCP LEASED TIME : %d Sec.\r\n", getDHCPLeasetime());//?????DHCP??????
+                                                 ^
+USER/main.c(176): warning: implicit declaration of function '__disable_interrupt' is invalid in C99 [-Wimplicit-function-declaration]
+        __disable_interrupt();
+        ^
+USER/main.c(190): warning: implicit declaration of function '__enable_interrupt' is invalid in C99 [-Wimplicit-function-declaration]
+        __enable_interrupt();
+        ^
+USER/main.c(175): warning: unused variable 'Count_Over' [-Wunused-variable]
+        uint8_t Count_Over = 0;
+                ^
+USER/main.c(10): warning: no previous extern declaration for non-static variable 'gDATABUF' [-Wmissing-variable-declarations]
+uint8_t gDATABUF[2048];//????????:2048
+        ^
+USER/main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t gDATABUF[2048];//????????:2048
+^
+USER/main.c(148): warning: unused function 'RegisterSPItoW5500' [-Wunused-function]
+static void RegisterSPItoW5500(void)
+            ^
+USER/main.c(162): warning: unused function 'InitW5500SocketBuf' [-Wunused-function]
+static void InitW5500SocketBuf(void)
+            ^
+USER/main.c(172): warning: unused function 'PhyLinkStatusCheck' [-Wunused-function]
+static void PhyLinkStatusCheck(void)
+            ^
+USER/main.c(26): warning: unused function 'DhcpInitHandler' [-Wunused-function]
+static void DhcpInitHandler(void);   /*DHCP???*/
+            ^
+USER/main.c(100): warning: unused function 'my_ip_assign' [-Wunused-function]
+static void my_ip_assign(void)
+            ^
+USER/main.c(75): warning: unused function 'my_ip_conflict' [-Wunused-function]
+static void my_ip_conflict(void)
+            ^
+36 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=560 RO-data=224 RW-data=4 ZI-data=2100  
+".\Objects\NET.axf" - 0 Error(s), 435 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/NordicSemiconductor.nRF_DeviceFamilyPack.8.32.1.pack
+                NordicSemiconductor.nRF_DeviceFamilyPack.8.32.1
+                Nordic Semiconductor nRF ARM devices Device Family Pack with BSD license.
+   * Component: Startup Version: 8.32.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\Users\qilai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\Users\qilai\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.32.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: NordicSemiconductor::Device:Startup:8.32.1
+      Include file:  Device\Include\system_nrf51.h
+      Source file:   Device\Source\arm\arm_startup_nrf51.s
+      Include file:  Device\Include\system_nrf.h
+      Source file:   Device\Source\system_nrf51.c
+Build Time Elapsed:  00:00:10
+</pre>
+</body>
+</html>

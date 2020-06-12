@@ -1,0 +1,52 @@
+T5960 000:037.510   SEGGER J-Link V6.70e Log File
+T5960 000:037.662   DLL Compiled: Apr 17 2020 17:55:05
+T5960 000:037.668   Logging started @ 2020-06-12 07:10
+T5960 000:037.683 JLINK_SetWarnOutHandler(...)
+T5960 000:037.691 - 0.010ms
+T5960 000:037.701 JLINK_OpenEx(...)
+T5960 000:041.092   Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+T5960 000:044.879   Hardware: V7.00
+T5960 000:044.891   S/N: 20090928
+T5960 000:044.899   OEM: SEGGER
+T5960 000:044.907   Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFull
+T5960 000:046.982   TELNET listener socket opened on port 19021
+T5960 000:047.051   WEBSRV Starting webserver
+T5960 000:047.207   WEBSRV Webserver running on local port 19080
+T5960 000:047.217 - 9.519ms returns "O.K."
+T5960 000:047.242 JLINK_GetEmuCaps()
+T5960 000:047.248 - 0.008ms returns 0x88EA5833
+T5960 000:047.256 JLINK_TIF_GetAvailable(...)
+T5960 000:047.878 - 0.627ms
+T5960 000:047.889 JLINK_SetErrorOutHandler(...)
+T5960 000:047.894 - 0.008ms
+T5960 000:047.917 JLINK_ExecCommand("ProjectFile = "C:\Users\qilai\Desktop\NRF51802_w5500\JLinkSettings.ini"", ...). 
+T5960 000:054.668 - 6.767ms returns 0x00
+T5960 000:057.713 JLINK_ExecCommand("Device = nRF51802_xxAA", ...). 
+T5960 000:060.760   Device "NRF51802_XXAA" selected.
+T5960 000:061.049 - 3.322ms returns 0x00
+T5960 000:061.059 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T5960 000:061.070 - 0.006ms returns 0x01
+T5960 000:061.077 JLINK_GetHardwareVersion()
+T5960 000:061.082 - 0.008ms returns 0x11170
+T5960 000:061.089 JLINK_GetDLLVersion()  returns 67005
+T5960 000:061.098 JLINK_GetFirmwareString(...)
+T5960 000:061.103 - 0.007ms
+T5960 000:070.446 JLINK_GetDLLVersion()  returns 67005
+T5960 000:070.464 JLINK_GetCompileDateTime()
+T5960 000:070.469 - 0.008ms
+T5960 000:073.172 JLINK_GetFirmwareString(...)
+T5960 000:073.182 - 0.013ms
+T5960 000:075.936 JLINK_GetHardwareVersion()
+T5960 000:075.946 - 0.012ms returns 0x11170
+T5960 000:086.994 JLINK_TIF_Select(JLINKARM_TIF_JTAG)
+T5960 000:089.919 - 2.933ms returns 0x00
+T5960 000:089.951 JLINK_SetSpeed(5000)
+T5960 000:090.035 - 0.088ms
+T5960 000:090.045 JLINK_GetIdData(pIdData)
+T5960 000:096.319   Could not measure total IR len. TDO is constant high.
+T5960 000:253.430   Could not measure total IR len. TDO is constant high.
+T5960 000:254.338 - 164.297ms
+T5960 002:211.559 JLINK_Close()
+T5960 002:220.631 - 9.089ms
+T5960 002:220.652   
+T5960 002:220.658   Closed

@@ -1,0 +1,15 @@
+--cpu Cortex-M0
+".\objects\hal.o"
+".\objects\w5500.o"
+".\objects\socket.o"
+".\objects\wizchip_conf.o"
+".\objects\nrf_drv_spi.o"
+".\objects\nrf_drv_common.o"
+".\objects\main.o"
+".\objects\nrf_it.o"
+".\objects\arm_startup_nrf51.o"
+".\objects\system_nrf51.o"
+--library_type=microlib --strict --scatter ".\Objects\NET.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\NET.map" -o .\Objects\NET.axf
